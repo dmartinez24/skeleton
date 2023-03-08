@@ -26,6 +26,15 @@ const defaultOptions = {
     console.log('%c SELECT INFO', 'color: lightpink');
     console.log(info);
   },
+  events: [
+    {
+      // this object will be "parsed" into an Event Object
+      title: 'Arya Stark', // a property!
+      start: new Date(), // a property!
+      display: 'block', // list-item, background
+      allDay: true,
+    },
+  ],
 };
 
 export function setUpFullCalendar(element, options = defaultOptions) {
