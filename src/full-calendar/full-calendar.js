@@ -13,6 +13,7 @@ const defaultOptions = {
   selectable: true,
   nowIndicator: true,
   weekends: true,
+  editable: true,
   headerToolbar: {
     left: 'prev, next, today',
     center: 'title',
