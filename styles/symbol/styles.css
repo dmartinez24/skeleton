@@ -1,0 +1,262 @@
+@import url("../reset.css");
+
+:root {
+  --cta-bg: linear-gradient(to right, #fb5155 0%, #f92a75 50%, #fb5155 100%);
+}
+
+
+header {
+  background-color: #2E4F76;
+}
+
+main {
+  margin-top: 40px;
+}
+
+
+
+/* LAYOUT */
+.max-wrapper {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+/**/
+
+/* BUTTON */
+.btn {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #fff;
+  background: transparent;
+  padding: 15px 30px;
+  text-align: center;
+  cursor: pointer;
+  background-size: 200% auto;
+  border-radius: 5px;
+  transition: all 500ms ease;
+}
+
+.btn-cta {
+  background-image: var(--cta-bg);
+}
+
+/**/
+
+
+
+/*HEADER*/
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+/**/
+
+/* NAVIGATION */
+
+.navigation-container {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navigation-list {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+}
+
+.navigation-list > * + * {
+  margin: 0px 20px 0 15px;
+}
+
+.navigation-list .navigation-item:first-child {
+  margin-right: 20px;
+}
+
+.navigation-list .navigation-item:last-child {
+  margin-right: 0;
+}
+
+.navigation-item {
+  padding: 25px 0px 20px 0px;
+}
+
+.navigation-link{
+  color: #fff;
+}
+
+.contact-container {
+  padding: 10px 0px 10px 0px;
+  text-align: right;
+  color: #fff;
+
+}
+
+.support a {
+  color: inherit;
+}
+
+.logo-container {
+  align-self: center;
+}
+
+/* SERVICES*/
+
+
+.service-container {
+  display: flex;
+  gap: 30px;
+}
+
+
+.card {
+  padding: 48px 20px 40px 20px;
+  background: #fff;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease;
+}
+
+
+.service-card-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  font-style: normal;
+  color: #1d165c;
+}
+
+.service-card-fig {
+  min-height: 185px;
+}
+
+.service-card-img {
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  aspect-ratio: auto 200 / 160;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.service-card-text {
+  position: relative;
+  font-size: 16px;
+  line-height: 1.6em;
+  font-weight: 500;
+  font-family: 'Muli', sans-serif;
+  color: #666666;
+  margin: 0px;
+  transition: all 500ms ease;
+}
+/**/
+
+/* WHAT WE DO*/
+
+.wwd-container {
+  margin-top: 40px;
+  padding-block: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 50px;
+}
+
+.wwd-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  font-style: normal;
+  color: #1d165c;
+}
+
+.wwd-img {
+  height: auto;
+  display: inline-block;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  aspect-ratio: auto 200 / 160;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.wwd-link {
+  color: #1d165c;
+  line-height: 30px;
+  display: inline-block;
+}
+
+.wwd-fig {
+  min-height: 185px;
+}
+
+.wwd-read-more a {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  color: #1d165c;
+}
+
+/**/
+
+/* SYMBOL FOR PARTNERS */
+.sfp-container {
+  margin-top: 40px;
+  padding-block: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 30px;
+}
+.sfp-title {
+  margin-bottom: 24px;
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 600;
+  font-style: normal;
+  color: #1d165c;
+}
+.sfp-title a {
+  color: inherit;
+}
+
+.sfp-icon {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  background: #fff;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.1);
+  transition: all 500ms ease;
+}
+.sfp-fig {
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.sfp-read-more {
+  margin-top: 15px;
+}
+
+.sfp-read-more a {
+  color: #f9326e;
+}
+
+.sfp-card {
+  position: relative;
+}
