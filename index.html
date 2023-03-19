@@ -7,24 +7,23 @@
     <title>Full calendar test</title>
 
     <style>
-      /*
-      element.style {
-    background-image: url("https://symbolsecurity.com/wp-content/uploads/2020/03/screen-4-1.png");
-    outline: none;
-    background-position: left -72px;
-    background-size: 609px;
-}
-
-      */
+      html {
+        font-family: "Montserrat", sans-serif;
+      }
     </style>
 
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/e7f5e398d9.js"></script>
   </head>
   <body>
       <header class="py-2">
         <section class="banner-section">
-            <div class="w-[71%] h-[890px] absolute top-0 right-0 bg-no-repeat" style="background-image: url(https://symbolsecurity.com/wp-content/uploads/2021/01/shape-56-1-2.png);"></div>
-            <div class="w-[67%] h-[820px] absolute top-0 right-0" style="background-image: url(https://symbolsecurity.com/wp-content/uploads/2021/01/shape-55-1-2.png);"></div>
+            <div class="w-[71%] h-[890px] absolute top-0 right-0 bg-no-repeat bg-[url('https://symbolsecurity.com/wp-content/uploads/2021/01/shape-56-1-2.png')]"></div>
+            <div class="w-[67%] h-[820px] absolute top-0 right-0 bg-[url('https://symbolsecurity.com/wp-content/uploads/2021/01/shape-55-1-2.png')]"></div>
         </section>
         <div class="px-4 max-w-6xl mx-auto relative">
             <div class="flex justify-between">
@@ -39,15 +38,14 @@
                 </figure>
               </div>
               <div>
-                <div class="py-2 text-right text-white">
-                  <div class="support">
-                    <i class="flaticon-music"></i><span>Get in touch</span
-                  ><a href="tel:http://+1%20(201)%20381-6077"
-                  >+1 (201) 381-6077</a
-                  >
+                <div class="py-2 text-right text-white flex justify-end">
+                  <div class="px-5 relative before:content-[''] before:w-[1px] before:h-full before:bg-white before:bg-opacity-5 before:top-0 before:right-0 before:absolute">
+                    <i class="fa-solid fa-headphones text-rose-500 mr-2"></i>
+                    <span class="mx-1">Get in touch</span>
+                    <a class="" href="tel:http://+1%20(201)%20381-6077">+1 (201) 381-6077</a>
                   </div>
-                  <ul class="social-links clearfix">
-                    <li>
+                  <ul class="flex pl-3">
+                    <li class="px-2">
                       <a
                             href="https://www.facebook.com/Symbol-Security-104853571005083"
                             style="
@@ -57,21 +55,21 @@
                       ><i class="fab fa-facebook"></i
                       ></a>
                     </li>
-                    <li>
+                    <li class="px-2">
                       <a
                             href="https://www.linkedin.com/company/symbolsecurity/"
                             style="color: rgb(255, 255, 255)"
                       ><i class="fab fa-linkedin"></i
                       ></a>
                     </li>
-                    <li>
+                    <li class="px-2">
                       <a
                             href="https://twitter.com/Symbol_Security"
                             style=" color: rgb(255, 255, 255)"
                       ><i class="fab fa-twitter-square"></i
                       ></a>
                     </li>
-                    <li>
+                    <li class="px-2">
                       <a
                             href="https://www.youtube.com/channel/UCfc7b3eAFp1sMSmBVEU-eSQ"
                             style=" color: rgb(255, 255, 255)"
@@ -83,30 +81,29 @@
                 <div class="border-t-[rgba(255,255,255,0.2)] border-t border-solid">
                 <nav>
                     <ul class="flex self-end items-center">
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4">
                         <a
-                              class="text-white"
+                              class="text-white font-bold"
                               href="https://symbolsecurity.com/"
                               title="Home"
                         >Home</a
                         >
                       </li>
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5 ml-3">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4 ml-3">
                         <a
-                              class="navigation-link"
+                              class="text-white font-bold"
                               href="https://symbolsecurity.com/about-us/"
                               title="About us"
                         >About us</a
                         >
                       </li>
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5 ml-3">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4 ml-3 flex items-center">
                         <a
                               aria-expanded="false"
-                              class="navigation-link"
+                              class="text-white font-bold"
                               href="#"
                               title="What we do"
-                        >What we do</a
-                        >
+                        >What we do</a>
                         <!--<ul role="menu" class="submenu">
                           <li
                                 id="menu-item-2990"
@@ -194,21 +191,20 @@
                             >
                           </li>
                         </ul>-->
-                        <div class="dropdown-btn">
-                          <span class="fas fa-angle-down"></span>
+                        <div class="dropdown-btn text-white ml-1">
+                          <i class="fas fa-angle-down text-inherit"></i>
                         </div>
                       </li>
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5 ml-3">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4 ml-3 flex items-center">
                         <a
                               aria-expanded="false"
-                              class="navigation-link"
+                              class="text-white font-bold"
                               data-options="easing: easeOutQuart"
                               data-scroll=""
                               data-toggle="dropdown1"
                               href="https://symbolsecurity.com/partners/"
                               title="Partners"
-                        >Partners</a
-                        >
+                        >Partners</a>
                         <!--<ul role="menu" class="submenu">
                           <li
                                 id="menu-item-2409"
@@ -251,21 +247,19 @@
                             >
                           </li>
                         </ul>-->
-                        <div class="dropdown-btn">
-                          <span class="fas fa-angle-down"></span>
+                        <div class="dropdown-btn text-white ml-1">
+                          <i class="fas fa-angle-down text-inherit"></i>
                         </div>
                       </li>
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5 ml-3">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4 ml-3 flex items-center">
                         <a
                               aria-expanded="false"
-                              class="navigation-link"
+                              class="text-white font-bold"
                               data-options="easing: easeOutQuart"
                               data-scroll=""
                               data-toggle="dropdown1"
                               href="#"
-                              title="Resources"
-                        >Resources</a
-                        >
+                              title="Resources">Resources</a>
                        <!-- <ul role="menu" class="submenu">
                           <li
                                 id="menu-item-1381"
@@ -333,13 +327,13 @@
                             </div>
                           </li>
                         </ul>-->
-                        <div class="dropdown-btn">
-                          <span class="fas fa-angle-down"></span>
+                        <div class="dropdown-btn text-white ml-1">
+                          <i class="fas fa-angle-down text-inherit"></i>
                         </div>
                       </li>
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5 ml-3">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4 ml-3">
                         <a
-                              class="navigation-link"
+                              class="text-white font-bold"
                               data-options="easing: easeOutQuart"
                               data-scroll=""
                               href="https://symbolsecurity.com/contact/"
@@ -347,9 +341,9 @@
                         >Contact</a
                         >
                       </li>
-                      <li class="pt-6 px-0 pb-5 my-0 mr-5 ml-3">
+                      <li class="pt-6 px-0 pb-5 my-0 mr-4 ml-3">
                         <a
-                              class="navigation-link"
+                              class="text-white font-bold"
                               data-options="easing: easeOutQuart"
                               data-scroll=""
                               href="https://symbolsecurity.com/contact/"
@@ -360,7 +354,7 @@
                       <li class="pt-6 px-0 pb-5 my-0 ml-3">
                         <div class="btn-box">
                           <a
-                                class="text-base leading-7 font-bold text-white bg-transparent text-center cursor-pointer rounded btn-cta py-3 px-7 bg-auto"
+                                class="text-base leading-7 font-bold text-white text-center cursor-pointer bg-gradient-to-r from-rose-500 via-[#F92A75] to-rose-500 rounded  py-3 px-7 "
                                 href="https://cas.symbolsecurity.com/auth/login/"
                           >Log In</a
                           >
@@ -376,7 +370,6 @@
       </header>
       <main class="mt-10 isolate">
          <div class="py-4 max-w-6xl mx-auto">
-
            <section class="flex py-20 pb-24">
              <div class="flex-1 w-1/2">
                <h1
@@ -396,15 +389,15 @@
                </p>
                <div class="p-0 m-0 leading-6 text-left text-zinc-700" style="outline: none;">
                  <a
-                       class="shadow-2xl inline-block py-2 px-10 text-base not-italic font-bold leading-7 text-center rounded-sm cursor-pointer bg-neutral-100 text-slate-800"
+                       class="shadow-2xl relative inline-block py-2 px-10 text-base not-italic font-bold leading-7 text-center rounded-sm cursor-pointer bg-neutral-100 text-slate-800 mr-4 before:content-[''] before:w-2 before:h-2 before:bg-rose-500 before:absolute before:top-1/2 before:left-5 before:-translate-y-1/2"
                        href="https://symbolsecurity.com/contact/"
                  >Get Started ➕
                  </a>
 
                  <a
-                       class="shadow-2xl inline-block relative py-2 px-5 m-0 font-sans text-base not-italic font-bold leading-7 text-center text-white bg-transparent rounded-sm cursor-pointer"
+                       class="shadow-2xl inline-block relative py-2 px-5 m-0 font-sans text-base not-italic font-bold leading-7 text-center text-white rounded-sm cursor-pointer bg-gradient-to-r from-rose-500 via-[#F92A75] to-rose-500"
                        href="https://symbolsecurity.com/partners/"
-                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; z-index: 1; box-shadow: none; background-image: linear-gradient(to right, rgb(251, 81, 85) 0%, rgb(249, 42, 117) 50%, rgb(251, 81, 85) 100%);">
+                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; z-index: 1; box-shadow: none; ">
                    Become a partner
                    <span class="inline-block relative p-0 my-0 mr-0 ml-2 w-5 h-5 text-2xl leading-5 text-rose-500 bg-white rounded-sm"
                        style="outline: none;">+</span>
@@ -459,7 +452,7 @@
                </p>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
-               <h3 class="mb-6 text-xl leading-7 opacity-100 text-slate-800">Better Cyber Learning</h3>
+               <h3 class="mb-6 text-xl leading-7 opacity-100 text-slate-800">Smart and Intuitive Reporting</h3>
                <figure class="service-card-fig">
                  <img
                        alt=""
@@ -467,18 +460,17 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/homepage_icons_Better_Cyber_Learning.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/homepage_icons_Smart_Reporting.png?resize=200%2C160&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <p class="relative visible p-0 mx-0 mt-0 mb-4 text-base not-italic font-medium leading-6 text-center opacity-100 text-stone-500">
-                 Symbol Awareness Training and Simulations are authentic, clean, and simply
-                 put, BETTER! &nbsp;
+                 Intelligent Dashboards and meaningful detail for internal review and audit compliance. &nbsp;
                </p>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
-               <h3 class="mb-6 text-xl leading-7 opacity-100 text-slate-800">Better Cyber Learning</h3>
+               <h3 class="mb-6 text-xl leading-7 opacity-100 text-slate-800">Personalized for your Company!</h3>
                <figure class="service-card-fig">
                  <img
                        alt=""
@@ -486,18 +478,17 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/homepage_icons_Better_Cyber_Learning.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/homepage_icons_Customize_for_your_Company.png?resize=200%2C160&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <p class="relative visible p-0 mx-0 mt-0 mb-4 text-base not-italic font-medium leading-6 text-center opacity-100 text-stone-500">
-                 Symbol Awareness Training and Simulations are authentic, clean, and simply
-                 put, BETTER! &nbsp;
+                 Unique Training, Templates, and Curriculums can be tailored to your specific situations. &nbsp;
                </p>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
-               <h3 class="mb-6 text-xl leading-7 opacity-100 text-slate-800">Better Cyber Learning</h3>
+               <h3 class="mb-6 text-xl leading-7 opacity-100 text-slate-800">Shine a Light on the Dark Web</h3>
                <figure class="service-card-fig">
                  <img
                        alt=""
@@ -505,14 +496,13 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/homepage_icons_Better_Cyber_Learning.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/homepage_icons_Beware_the_Dark_Web.png?resize=200%2C160&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <p class="relative visible p-0 mx-0 mt-0 mb-4 text-base not-italic font-medium leading-6 text-center opacity-100 text-stone-500">
-                 Symbol Awareness Training and Simulations are authentic, clean, and simply
-                 put, BETTER! &nbsp;
+                 Mitigate the risk of stolen credentials and domain squatting to ensure cyber safety.
                </p>
              </article>
            </section>
@@ -522,16 +512,11 @@
              <div
                    class="relative py-0 px-4 m-0 w-full leading-5 text-center sm:max-w-full sm:flex-shrink-0 sm:flex-grow-0 sm:basis-full md:max-w-full md:flex-shrink-0 md:flex-grow-0 md:basis-full lg:max-w-full lg:flex-shrink-0 lg:flex-grow-0 lg:basis-full text-zinc-700"
                    style="outline: none;">
-                 <h2 class="relative visible px-0 pt-0 pb-4 m-0 font-sans text-4xl not-italic font-normal text-center opacity-100 text-slate-800"
+                 <h2 class="relative visible px-0 pt-0 pb-4 m-0 font-sans text-4xl not-italic font-bold text-center opacity-100 text-slate-800"
                      style="line-height: 46px; outline: none; transition: all 500ms ease 0s;">
-                   <strong
-                         class="p-0 m-0 text-4xl text-center text-slate-800"
-                         style="outline: none; font-weight: bolder; line-height: 46px;"
-                   >What we do</strong>
+                   What we do
                  </h2>
-                 <div
-                       class="relative p-0 my-0 mx-auto w-16 h-2 leading-5 text-center bg-no-repeat text-zinc-700"
-                       style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png"); outline: none;'
+                 <div class="relative p-0 my-0 mx-auto w-16 h-2 leading-5 text-center bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png')] bg-contain"
                  ></div>
 
              </div>
@@ -556,15 +541,16 @@
                </figure>
                <div class="p-0 m-0 leading-6 text-center text-zinc-700" style="outline: none;">
                  <a
-                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-violet-700"
+                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-rose-500"
                        href="https://symbolsecurity.com/security-awareness-training/"
-                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;"
-                 >Read More</a>
+                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;">
+                   <i class="fas fa-angle-left text-inherit mr-2 text-xs"></i>Read More<i class="fas fa-angle-right text-inherit ml-2 text-xs"></i>
+                 </a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
                <h3 class="mb-6 text-xl leading-7 font-semibold">
-                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Security Awareness Training</a>
+                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Phishing Recognition via Simulated Phishing Attacks</a>
                </h3>
                <figure class="block relative p-0 m-0 max-w-full leading-6 text-center text-zinc-700" style="outline: none; min-height: 185px;">
                  <img
@@ -573,22 +559,22 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-security-awareness-trianing.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-phishing-simulations.png?resize=154%2C160&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <div class="p-0 m-0 leading-6 text-center text-zinc-700" style="outline: none;">
-                 <a
-                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-violet-700"
-                       href="https://symbolsecurity.com/security-awareness-training/"
-                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;"
-                 >Read More</a>
+                  <a
+                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-rose-500"
+                       href="https://symbolsecurity.com/security-awareness-training/">
+                   <i class="fas fa-angle-left text-inherit mr-2 text-xs"></i>Read More<i class="fas fa-angle-right text-inherit ml-2 text-xs"></i>
+                 </a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
                <h3 class="mb-6 text-xl leading-7 font-semibold">
-                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Security Awareness Training</a>
+                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Domain Threat Alerts</a>
                </h3>
                <figure class="block relative p-0 m-0 max-w-full leading-6 text-center text-zinc-700" style="outline: none; min-height: 185px;">
                  <img
@@ -597,22 +583,23 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-security-awareness-trianing.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-dark-web-2.png?resize=158%2C149&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <div class="p-0 m-0 leading-6 text-center text-zinc-700" style="outline: none;">
-                 <a
-                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-violet-700"
+                  <a
+                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-rose-500"
                        href="https://symbolsecurity.com/security-awareness-training/"
-                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;"
-                 >Read More</a>
+                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;">
+                   <i class="fas fa-angle-left text-inherit mr-2 text-xs"></i>Read More<i class="fas fa-angle-right text-inherit ml-2 text-xs"></i>
+                 </a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
                <h3 class="mb-6 text-xl leading-7 font-semibold">
-                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Security Awareness Training</a>
+                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Email Threat Alerts</a>
                </h3>
                <figure class="block relative p-0 m-0 max-w-full leading-6 text-center text-zinc-700" style="outline: none; min-height: 185px;">
                  <img
@@ -621,22 +608,23 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-security-awareness-trianing.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-dark-web.png?resize=163%2C160&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <div class="p-0 m-0 leading-6 text-center text-zinc-700" style="outline: none;">
-                 <a
-                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-violet-700"
+                  <a
+                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-rose-500"
                        href="https://symbolsecurity.com/security-awareness-training/"
-                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;"
-                 >Read More</a>
+                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;">
+                   <i class="fas fa-angle-left text-inherit mr-2 text-xs"></i>Read More<i class="fas fa-angle-right text-inherit ml-2 text-xs"></i>
+                 </a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
                <h3 class="mb-6 text-xl leading-7 font-semibold">
-                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Security Awareness Training</a>
+                 <a class="wwd-link" href="https://symbolsecurity.com/security-awareness-training/">Password Hygiene Tools and Alerting Services</a>
                </h3>
                <figure class="block relative p-0 m-0 max-w-full leading-6 text-center text-zinc-700" style="outline: none; min-height: 185px;">
                  <img
@@ -645,17 +633,18 @@
                        decoding="async"
                        height="160"
                        loading="lazy"
-                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-security-awareness-trianing.png?resize=200%2C160&amp;ssl=1"
+                       src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/password.png?resize=200%2C160&ssl=1"
                        style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                        width="200"
                  />
                </figure>
                <div class="p-0 m-0 leading-6 text-center text-zinc-700" style="outline: none;">
-                 <a
-                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-violet-700"
+                  <a
+                       class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-rose-500"
                        href="https://symbolsecurity.com/security-awareness-training/"
-                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;"
-                 >Read More</a>
+                       style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;">
+                   <i class="fas fa-angle-left text-inherit mr-2 text-xs"></i>Read More<i class="fas fa-angle-right text-inherit ml-2 text-xs"></i>
+                 </a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded">
@@ -669,17 +658,18 @@
                      decoding="async"
                      height="160"
                      loading="lazy"
-                     src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/02/home-security-awareness-trianing.png?resize=200%2C160&amp;ssl=1"
+                     src="https://i0.wp.com/symbolsecurity.com/wp-content/uploads/2021/03/blog1-1-2.png?resize=200%2C160&ssl=1"
                      style="outline: none; transition: all 500ms ease 0s; box-shadow: none;"
                      width="200"
                />
              </figure>
              <div class="p-0 m-0 leading-6 text-center text-zinc-700" style="outline: none;">
                <a
-                     class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-violet-700"
+                     class="inline-block relative p-0 m-0 font-sans text-base not-italic font-bold leading-6 text-center bg-transparent cursor-pointer text-slate-800 hover:text-rose-500"
                      href="https://symbolsecurity.com/security-awareness-training/"
-                     style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;"
-               >Read More</a>
+                     style="outline: none; text-decoration: none; transition: all 500ms ease 0s; box-shadow: none;">
+                 <i class="fas fa-angle-left text-inherit mr-2 text-xs"></i>Read More<i class="fas fa-angle-right text-inherit ml-2 text-xs"></i>
+               </a>
              </div>
            </article>
            </section>
@@ -695,8 +685,7 @@
                Add Symbol to Your Portfolio!
              </h3>
 
-             <div class="relative p-0 my-0 mx-auto w-16 h-2 mb-5 font-bold leading-6 text-center bg-no-repeat text-zinc-700"
-                  style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png"); outline: none;'
+             <div class="relative p-0 my-0 mx-auto w-16 h-2 leading-5 text-center bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png')] bg-contain"
              ></div>
 
              <div class="relative p-0 mx-0 mt-0 mb-8 text-base leading-6 text-center text-zinc-700" style="outline: none;">
@@ -716,11 +705,14 @@
                </h3>
                <div class="mb-7 mt-4">
                  <span class="border-layer"></span>
-                 <i class="fa fa-user-tag relative inline-block 5xl bg-white text-center w-24 h-24 shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded-full" ></i>
+                 <span class="text-4xl relative  inline-block bg-white text-center w-24 h-24 shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded-full text-rose-500">
+                   <i class="fa fa-user-tag absolute w-10 h-10 absolute  top-0 left-0 bottom-0 right-0 m-auto"></i>
+                 </span>
+
                </div>
                <p></p>
                <div class="mt-3">
-                 <a class="text-rose-500" href="sales-partners/"><i class="fas fa-angle-left"></i> Read More <i class="fas fa-angle-right"></i></a>
+                 <a class="text-rose-500" href="sales-partners/"><i class="fas fa-angle-left text-xs"></i> Read More <i class="fas fa-angle-right text-xs"></i></a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded flex-auto">
@@ -729,11 +721,13 @@
                </h3>
                <div class="mb-7 mt-4">
                  <span class="border-layer"></span>
-                 <i class="fa fa-user-tag relative inline-block 5xl bg-white text-center w-24 h-24 shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded-full" ></i>
+                 <span class="text-4xl relative  inline-block bg-white text-center w-24 h-24 shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded-full text-rose-500">
+                   <i class="fa fa-user-tag absolute w-10 h-10 absolute  top-0 left-0 bottom-0 right-0 m-auto"></i>
+                 </span>
                </div>
                <p></p>
                <div class="mt-3">
-                 <a class="text-rose-500" href="sales-partners/"><i class="fas fa-angle-left"></i> Read More <i class="fas fa-angle-right"></i></a>
+                 <a class="text-rose-500" href="sales-partners/"><i class="fas fa-angle-left text-xs"></i> Read More <i class="fas fa-angle-right text-xs"></i></a>
                </div>
              </article>
              <article class="pt-11 px-5 pb-10 bg-white text-center  shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded flex-auto">
@@ -742,11 +736,13 @@
                </h3>
                <div class="mb-7 mt-4">
                  <span class="border-layer"></span>
-                 <i class="fa fa-user-tag relative inline-block 5xl bg-white text-center w-24 h-24 shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded-full" ></i>
+                 <span class="text-4xl relative  inline-block bg-white text-center w-24 h-24 shadow-[0_10px_30px_5px_rgba(0,0,0,0.1)] rounded-full text-rose-500">
+                   <i class="fa fa-user-tag absolute w-10 h-10 absolute  top-0 left-0 bottom-0 right-0 m-auto"></i>
+                 </span>
                </div>
                <p></p>
                <div class="mt-3">
-                 <a class="text-rose-500" href="sales-partners/"><i class="fas fa-angle-left"></i> Read More <i class="fas fa-angle-right"></i></a>
+                 <a class="text-rose-500" href="sales-partners/"><i class="fas fa-angle-left text-xs"></i> Read More <i class="fas fa-angle-right text-xs"></i></a>
                </div>
              </article>
            </section>
@@ -754,13 +750,11 @@
            <section class="py-28">
              <div class="flex justify-between">
                <div>
-                 <h2 class="relative visible px-0 pt-0 pb-4 m-0 font-sans text-4xl not-italic font-normal text-left opacity-100 text-slate-800"
+                 <h2 class="relative visible px-0 pt-0 pb-4 m-0 font-sans font-bold text-4xl not-italic text-left opacity-100 text-slate-800"
                        style="line-height: 46px; outline: none; transition: all 500ms ease 0s;">
-                   <strong class="p-0 m-0 text-4xl text-left text-slate-800" style="outline: none; font-weight: bolder; line-height: 46px;">Partner and Customer Feedback</strong>
+                  Partner and Customer Feedback
                  </h2>
-                 <div
-                       class="relative p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700"
-                       style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png"); outline: none;'
+                 <div class="relative p-0 my-0 w-16 h-2 leading-5  bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png')] bg-contain"
                  ></div>
                </div>
                <a
@@ -773,14 +767,14 @@
              <div>
                <div class="w-1/2 ml-auto pt-10 relative">
                  <ul class=" p-0 mx-0 mt-0 mb-5 font-bold leading-6 text-left text-zinc-700 flex text-xl" style='outline: none; list-style: none; content: "";'>
-                   <li class="px-1">⭐️</li>
-                   <li class="px-1">⭐️</li>
-                   <li class="px-1">⭐️</li>
-                   <li class="px-1">⭐️</li>
-                   <li class="px-1">⭐️</li>
+                   <li class="px-1"><i class="fa-solid fa-star text-yellow-400"></i></li>
+                   <li class="px-1"><i class="fa-solid fa-star text-yellow-400"></i></li>
+                   <li class="px-1"><i class="fa-solid fa-star text-yellow-400"></i></li>
+                   <li class="px-1"><i class="fa-solid fa-star text-yellow-400"></i></li>
+                   <li class="px-1"><i class="fa-solid fa-star text-yellow-400"></i></li>
                  </ul>
 
-                 <p class="relative visible p-0 mx-0 mt-0 mb-8 text-2xl not-italic font-medium text-left opacity-100 text-stone-500"
+                 <p class="relative visible p-0 mx-0 mt-0 mb-8 text-2xl not-italic font-normal text-left opacity-100 text-stone-500"
                        style="line-height: 42px; outline: none;  transition: all 500ms ease 0s;">
                    Symbol’s unique approach to solving for Cyber Awareness has given us the right
                    mix of automation and customization.
@@ -794,19 +788,16 @@
                    <span class="block p-0 m-0 font-bold leading-6 text-left text-rose-500" style="outline: none;">Sr. Director of IT, Motus, LLC</span>
                  </div>
 
-                 <div class="absolute top-16 -left-1/4 p-0 m-0 w-20 h-20 text-3xl font-bold text-center text-white"
-                      style="outline: none; line-height: 80px; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; background-image: -webkit-linear-gradient(-30deg, rgb(251, 77, 88), rgb(249, 47, 113) 100%);">
-                   <i
-                         class="p-0 m-0 not-italic text-center"
-                         style="outline: none; font-family: Flaticon; line-height: 80px;"
-                   ></i>
+                 <div class="absolute top-16 -left-1/4 p-0 m-0 w-20 h-20 text-3xl font-bold text-center text-white bg-gradient-to-r from-rose-500 via-[#F92A75] to-rose-500"
+                      style="outline: none; line-height: 80px; border-radius: 50%; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;">
+                   <i class="fa-solid fa-quote-left"></i>
                  </div>
 
                </div>
 
                <div class="text-right py-10 text-2xl">
-                 <button class="px-2">⬅️</button>
-                 <button>➡️</button>
+                 <button class="px-7"><i class="fa-solid fa-arrow-left"></i></button>
+                 <button><i class="fa-solid fa-arrow-right"></i></button>
                </div>
              </div>
            </section>
@@ -856,19 +847,28 @@
              <div class="relative leading-6 text-center bg-no-repeat  rounded text-zinc-700 flex-1 flex items-end"
                    style='background-image: url("https://symbolsecurity.com/wp-content/uploads/2020/03/screen-4-1.png"); outline: none; background-position: center right; background-size: 650px'>
                <div class="font-bold leading-6 cursor-pointer text-zinc-700 font-bold leading-6 text-left bg-white rounded text-zinc-700 w-full max-w-2xl shadow-2xl flex text-xl items-start">
-                  <button class="relative py-6 px-16 inline-block max-w-min text-left before:content-[''] before:absolute before:bottom-0 before:left-5 before:w-4/5 before:h-1 before:bg-rose-500">Small-Midsize Businesses</button>
-                  <button class="py-6 px-16 inline-block max-w-min text-left">Large Businesses</button>
+                  <button class="relative py-6 px-16 inline-block max-w-min text-left before:content-[''] before:absolute before:bottom-0 before:left-5 before:w-4/5 before:h-1 before:bg-rose-500">
+                    <span class="relative">
+                      <i class="fa-solid fa-circle-check text-rose-500 text-xl absolute top-0 -left-10"></i>
+                    Small-Midsize Businesses
+                    </span>
+                  </button>
+                  <button class="py-6 px-16 inline-block max-w-min text-left">
+                    <span class="relative">
+                      <i class="fa-regular fa-circle-check text-rose-500 text-xl absolute top-0 -left-10"></i>
+                    Large Businesses
+                    </span>
+                  </button>
                </div>
              </div>
            </section>
 
            <section class="text-center relative px-0 py-20 m-0 font-bold leading-6 text-left bg-white text-zinc-700 bg-opacity-[0]" style="outline: none; transition: background 0.3s ease 0s, border 0.3s ease 0s, border-radius 0.3s ease 0s, box-shadow 0.3s ease 0s;">
              <h2 class="relative visible px-0 pt-0 pb-4 m-0 font-sans text-4xl not-italic font-normal text-center opacity-100 text-slate-800" style="line-height: 46px; outline: none; transition: all 500ms ease 0s;">Are you interested in our services?</h2>
-             <div class="relative p-0 my-0 mx-auto w-16 h-2 font-bold leading-6 text-center bg-no-repeat text-zinc-700"
-                   style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png"); outline: none;'
+             <div class="relative p-0 my-0 mx-auto w-16 h-2 font-bold leading-6 text-center bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-1.png')] bg-contain"
              ></div>
              <a
-                   class="inline-block py-5 px-10 m-0 mt-10 w-auto font-sans text-lg not-italic font-medium leading-none text-center text-white rounded cursor-pointer hover:border-slate-900 hover:bg-gradient-to-r hover:from-slate-900 hover:to-slate-900 hover:text-white focus:border-slate-900 focus:bg-slate-900 focus:text-white bg-[linear-gradient(to_right,rgb(251,81,85)_0%,rgb(249,42,117)_50%,rgb(251,81,85)_100%)] shadow-2xl"
+                   class="inline-block py-5 px-10 m-0 mt-10 w-auto font-sans text-lg not-italic font-medium leading-none text-center text-white rounded cursor-pointer hover:border-slate-900 hover:bg-gradient-to-r hover:from-slate-900 hover:to-slate-900 hover:text-white focus:border-slate-900 focus:bg-slate-900 focus:text-white bg-gradient-to-r from-rose-500 via-[#F92A75] to-rose-500 shadow-2xl"
                    href="https://symbolsecurity.com/contact/"
                    role="button">
                <span
@@ -889,9 +889,8 @@
                       class="block relative visible px-0 pt-0 pb-5 m-0 text-2xl not-italic font-medium leading-7 text-left text-white opacity-100">
                   Contact Us
                 </h3>
-                <div
-                      class="absolute bottom-0 left-0 p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700"
-                      style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-3.png"); outline: none;'
+
+                <div class="absolute bottom-0 left-0 p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-3.png')] bg-contain"
                 ></div>
               </div>
 
@@ -929,26 +928,24 @@
                       class="block relative visible px-0 pt-0 pb-5 m-0 text-2xl not-italic font-medium leading-7 text-left text-white opacity-100">
                   Resources
                 </h3>
-                <div
-                      class="absolute bottom-0 left-0 p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700"
-                      style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-3.png"); outline: none;'
+                <div class="absolute bottom-0 left-0 p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-3.png')] bg-contain"
                 ></div>
               </div>
 
               <ul class="relative p-0 m-0 font-bold leading-6 text-left text-zinc-700" style="outline: none; list-style: none;">
-                <li class="block relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
+                <li class="before:content-[''] before:absolute before:w-2 before:h-2 before:top-1/2 before:-left-2 before:bg-rose-500 before:rounded-full before:-translate-y-1/2 relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
                   <a class="inline-block relative p-0 m-0 font-sans not-italic font-medium bg-transparent cursor-pointer hover:text-sky-700"
                         href="https://symbolsecurity.freshdesk.com/support/home">FAQ</a>
                 </li>
-                <li class="block relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
+                <li class="before:content-[''] before:absolute before:w-2 before:h-2 before:top-1/2 before:-left-2 before:bg-rose-500 before:rounded-full before:-translate-y-1/2 relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
                   <a class="inline-block relative p-0 m-0 font-sans not-italic font-medium bg-transparent cursor-pointer hover:text-sky-700"
                         href="https://symbolsecurity.com/blog-posts/">Blog</a>
                 </li>
-                <li class="block relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
+                <li class="before:content-[''] before:absolute before:w-2 before:h-2 before:top-1/2 before:-left-2 before:bg-rose-500 before:rounded-full before:-translate-y-1/2 relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
                   <a class="inline-block relative p-0 m-0 font-sans not-italic font-medium bg-transparent cursor-pointer hover:text-sky-700"
                         href="https://symbolsecurity.freshdesk.com/support/home">Documentation</a>
                 </li>
-                <li class="block relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
+                <li class="before:content-[''] before:absolute before:w-2 before:h-2 before:top-1/2 before:-left-2 before:bg-rose-500 before:rounded-full before:-translate-y-1/2 relative py-0 pr-0 pl-5 mx-0 mt-0 mb-3 leading-6 text-white">
                   <a class="inline-block relative p-0 m-0 font-sans not-italic font-medium bg-transparent cursor-pointer hover:text-sky-700"
                         href="https://app.symbolsecurity.com">Sign in</a>
                 </li>
@@ -960,9 +957,7 @@
                       class="block relative visible px-0 pt-0 pb-5 m-0 text-2xl not-italic font-medium leading-7 text-left text-white opacity-100">
                   About Company
                 </h3>
-                <div
-                      class="absolute bottom-0 left-0 p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700"
-                      style='background-image: url("https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-3.png"); outline: none;'
+                <div class="absolute bottom-0 left-0 p-0 m-0 w-16 h-2 font-bold leading-6 text-left bg-no-repeat text-zinc-700 bg-[url('https://symbolsecurity.com/wp-content/themes/naxly/assets/images/icons/decor-3.png')] bg-contain"
                 ></div>
               </div>
 
@@ -997,14 +992,11 @@
                       type="email"
                 />
                 <button
-                      class="inline-block top-0 right-0 py-3 px-10 m-0  text-base font-bold leading-7 text-center text-white normal-case rounded cursor-pointer rounded-tl-none rounded-bl-none"
-                      style="outline: none; transition: all 500ms ease 0s; background-image: linear-gradient(to right, rgb(251, 81, 85) 0%, rgb(249, 42, 117) 50%, rgb(251, 81, 85) 100%);"
+                      class="inline-block top-0 right-0 py-3 px-10 m-0  text-base font-bold leading-7 text-center text-white normal-case rounded cursor-pointer rounded-tl-none rounded-bl-none bg-gradient-to-r from-rose-500 via-[#F92A75] to-rose-500"
                       type="submit"
                 >
                   Subscribe
                 </button>
-
-
               </div>
 
             </article>
@@ -1038,6 +1030,5 @@
           </section>
       </footer>
 
-      <script src="/src/main.js" type="module"></script>
   </body>
 </html>
