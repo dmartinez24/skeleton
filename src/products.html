@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="/vite.svg" rel="icon" type="image/svg+xml" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Eventpipe</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="/images/icon.png" rel="shortcut icon" type="image/x-icon"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+        crossorigin="anonymous"
+        src="https://kit.fontawesome.com/e7f5e398d9.js"
+  ></script>
+
+  <style>
+    html, a, ul, p, div {
+      font-family: 'Poppins', sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <nav class="max-w-screen-xl mx-auto flex relative flex-wrap justify-between items-center py-2 leading-7 bg-white lg:flex-nowrap lg:justify-start text-zinc-800 ">
+    <div class="flex justify-between items-center px-3 w-full leading-7 text-zinc-800 ">
+      <a class="py-1 mr-4 text-xl leading-8 whitespace-nowrap cursor-pointer text-zinc-900 hover:text-zinc-900 focus:text-zinc-900 no-underline"
+         href="/">
+        <img
+              alt=""
+              class="w-full text-2xl align-middle max-w-[220px]"
+              src="/images/eventpipe-logo.png"
+        />
+      </a>
+
+      <button
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="inline-block py-2 px-5 m-0 text-xl font-medium leading-none text-center uppercase bg-amber-400 rounded border border-solid cursor-pointer lg:hidden border-neutral-200 text-neutral-500"
+            data-bs-target="#navbarScroll"
+            data-bs-toggle="collapse"
+            style="transition: none 0s ease 0s; text-decoration: none"
+            type="button"
+      >
+        <i
+              aria-hidden="true"
+              class="inline-block text-2xl not-italic font-black text-white uppercase fa fa-bars"
+              style="
+                font-variant: normal;
+                text-rendering: auto;
+                font-family: 'Font Awesome 5 Free';
+              "
+        ></i>
+      </button>
+
+      <div
+            class="hidden flex-wrap flex-grow items-center lg:flex lg:basis-auto basis-full"
+            id="navbarScroll"
+      >
+        <ul
+              class="flex overflow-y-auto flex-col pl-0 my-2 mr-auto lg:my-0 lg:flex-row lg:overflow-visible"
+              style="
+                --bs-scroll-height: 200px;
+                list-style: none;
+                max-height: 200px;
+              "
+        >
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Home</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/products"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Product</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/about"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >About Us</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/press"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Resources</a
+            >
+          </li>
+
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/demo"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Request Demo</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center px-2 text-zinc-800">
+              <span class="inline-block mr-4 text-lg"
+              ><a
+                    class="cursor-pointer underline text-lg text-[#00ADB3]"
+                    href="http://app.eventpipe.com/"
+              >Login</a
+              >
+                or
+              </span>
+          <a
+                class="inline-block py-2 px-5 font-medium text-white text-lg uppercase rounded cursor-pointer no-underline bg-[#00ADB3]"
+                href="https://app.eventpipe.com/search/auth/new/"
+          >Manage Reservation</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="py-20 leading-7 text-zinc-800 max-w-screen-xl mx-auto" id="banner">
+    <div class="px-3 mx-auto w-full text-zinc-800">
+      <div class="flex flex-wrap items-center -mx-3 mt-0">
+        <div
+              class="flex-none px-3 mt-0 mb-6 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+        >
+          <h1 class="mt-0 mb-4 text-5xl font-bold xl:text-5xl"
+          >
+            Taking control of your event housing has never been easier
+          </h1>
+          <a
+                class="inline-block py-2 px-5 font-medium text-white uppercase bg-[#FCB817] rounded cursor-pointer"
+                href="/demo"
+                style="text-decoration: none;"
+          >Get a Demo</a
+          >
+        </div>
+
+        <div class="flex-none px-3 mt-0 w-full max-w-full md:w-1/2 md:flex-none">
+          <div class="relative">
+            <img
+                  alt=""
+                  class="w-full align-middle"
+                  src="/images/app-banner-1.svg"
+            />
+          </div>
+          <div
+                class="hidden fixed top-0 left-0 w-full h-full"
+                id="videoModal"
+                style="z-index: 1060; overflow: hidden auto; outline: 0px;"
+          >
+            <div
+                  class="flex relative items-center my-0 mx-auto w-auto bg-transparent pointer-events-none sm:mx-auto sm:my-6"
+                  style="min-height: calc(100% - 63px); max-width: 80%;"
+            >
+              <div
+                    class="flex relative flex-col w-full bg-clip-padding rounded pointer-events-auto"
+                    style="outline: 0px; text-align: end;"
+              >
+                <button
+                      class="flex py-1 px-2 mx-0 mt-0 mb-2 text-center text-black normal-case bg-amber-400 rounded cursor-pointer"
+                      style="align-self: end;"
+                >
+                  <i class="italic"></i>
+                </button>
+                <div
+                      class="relative px-0 pb-0"
+                      style="padding: 64% 0px 0px; position: relative; text-align: end;"
+                >
+                  <iframe
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen=""
+                        class="absolute top-0 left-0 w-full h-full border-0"
+                        data-ready="true"
+                        frameborder="0"
+                        id="epvideo"
+                        src="https://player.vimeo.com/video/605912106?h=748c282c59&amp;title=0&amp;byline=0&amp;portrait=0"
+                        style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: end;"
+                  ></iframe>
+                </div>
+                <script
+                      class=""
+                      src="https://player.vimeo.com/api/player.js"
+                      style="text-align: end;"
+                ></script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 leading-7 bg-stone-50 text-zinc-800">
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product1/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pl-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Manage your event housing with ease
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">Build an event in less than 10 minutes</div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Select from tens of thousands of hotels using dozens of filters
+                including room type, distance from venue and amenities
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Create a customizable booking site that will wow your attendees
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">Monitor pickup in real time</div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Access all your group block and reservation info in one place
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0 md:flex-row-reverse">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product2/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pr-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Create a branded housing site in minutes
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Upload your logo and other imagery without writing a line of code
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Create additional revenue streams through advertisement and other
+                optional items like cancellation fees
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Realize income when a reservation is made rather than after the
+                event by collecting transaction fees
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product3/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pl-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Manage group blocks effortlessly
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Choose from multiple hotels and room types
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">Designate a group block manager</div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">View live inventory</div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Provide attendees with instructions and unique booking link
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0 md:flex-row-reverse">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product4/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pr-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Streamline your RFP process
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Request your desired nights, room types, concessions and comp
+                rooms all in one easy-to-use interface
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Pick and choose which hotels you’d like to see a proposal from
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Copy national sales offices on any outgoing requests to keep them
+                in the loop and ensure follow-up
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Your hotel partners can review your request and respond right
+                within their own hotel portal
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Negotiate and accept proposals right from your account
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product5/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pl-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Simplify booking for attendees
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                70% of event hotel bookings are made on mobile devices. Make it
+                easy for your attendees with a mobile-friendly website
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Let your attendees easily view and manage their reservations after
+                booking in one location for all their rooms
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Capture attendee booking history and streamline the process for
+                booking the following year
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Give your guests a chance to get the hotel they really want by
+                allowing them to get on a waitlist for sold-out hotels
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Incorporate a reservation management link on your event website to
+                drive traffic and make it easy for your guests to find and book
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0 md:flex-row-reverse">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product6/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pr-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Keep your hotel partners happy
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Your hotel partners can view all pick-up and reservation data in
+                real time in a hotel-facing portal
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                They can confirm reservations and upload confirmation numbers
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                They can view and manage info across multiple hotels with one
+                login
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                They will easily view and respond to RFPs from the same portal
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product7/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pl-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Analyze and track results
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Analyze the pick-up &amp; financial performance of all your events
+                with Report Center
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Keep track of hotel cut-off dates across all your events and
+                hotels
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Monitor confirmation status of all your events’ reservations
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="py-12 px-0 text-zinc-800 max-w-screen-xl mx-auto">
+      <div class="px-3 mx-auto w-full">
+        <div class="flex flex-wrap items-center -mx-3 mt-0 md:flex-row-reverse">
+          <div
+                class="flex-none px-4 mt-0 mb-4 w-full max-w-full md:mb-0 md:w-1/2 md:flex-none"
+          >
+            <img
+                  class="block w-full align-middle"
+                  src="/products/product8/image.png"
+            />
+          </div>
+          <div
+                class="flex-none px-4 mt-0 w-full max-w-full md:w-1/2 md:flex-none md:pr-6"
+          >
+            <h2
+                  class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+            >
+              Rest easy with best in class data security
+            </h2>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Built on enterprise-grade cloud database technology that is SSAE
+                16, ISO 27001, &amp; PCI DSS compliant and supports HIPAA
+                compliance
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Data is encrypted at the storage level using the Advanced
+                Encryption Standard (AES256). Data is protected in transit using
+                Transport Layer Security (TLS) and HTTPS and SSL protocols
+              </div>
+            </div>
+
+            <div class="flex flex-row mb-4">
+              <div class="mr-4">
+                <img
+                      alt=""
+                      class="max-w-[20px]"
+                      src="/images/bullet.png"
+                />
+              </div>
+              <div class="font-light text-lg">
+                Multi region deployments for disaster recovery
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+<footer>
+  <section class="py-12 px-0 leading-7 bg-[#00ADB3]">
+    <div class="px-3 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <div class="flex flex-col justify-between items-center md:flex-row">
+        <div>
+          <h3
+                class="mt-0 mb-4 text-xl font-semibold text-white xl:text-2xl md:mb-0"
+          >
+            Ready to dive in? Let’s get in touch.
+          </h3>
+        </div>
+        <div>
+          <a
+                class="inline-block py-2 px-5 mr-4 font-medium leading-7 text-[#00ADB3] uppercase bg-white rounded cursor-pointer no-underline"
+                href="/contact"
+          >Contact Us</a>
+
+          <a
+                class="inline-block py-2 px-5 font-medium text-white uppercase bg-[#FCB817] rounded cursor-pointer"
+                href="/demo"
+                style="text-decoration: none;"
+          >get a demo</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-6 leading-7 bg-[#093E60] text-zinc-800">
+    <div class="px-3 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <div
+            class="flex flex-row flex-wrap justify-between items-center md:flex-row-reverse"
+      >
+        <div class="flex flex-row">
+          <a
+                class="mx-2 text-3xl font-bold text-white cursor-pointer hover:text-blue-700"
+                href="https://twitter.com/GetEventPipe"
+                style="text-decoration: underline; line-height: 54px;"
+                target="_blank"
+          ><i
+                aria-hidden="true"
+                class="inline-block text-4xl not-italic font-normal leading-none fab fa-twitter-square"
+                style='font-variant: normal; text-rendering: auto; font-family: "Font Awesome 5 Brands";'
+          ></i
+          ></a>
+          <a
+                class="text-3xl font-bold text-white cursor-pointer hover:text-blue-700"
+                href="https://www.linkedin.com/company/eventpipe"
+                style="text-decoration: underline; line-height: 54px;"
+                target="_blank"
+          ><i
+                aria-hidden="true"
+                class="inline-block text-4xl not-italic font-normal leading-none fab fa-linkedin"
+                style='font-variant: normal; text-rendering: auto; font-family: "Font Awesome 5 Brands";'
+          ></i
+          ></a>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="">
+            <img
+                  alt=""
+                  class="align-middle"
+                  src="/images/icon-white.png"
+                  width="40px"
+            />
+          </div>
+          <div class="">
+            <small class="block ml-4 text-sm font-light leading-5 text-white"
+            >For details on how we use your information please see our
+              <a
+                    class="text-sm cursor-pointer underline"
+                    href="/legal/privacy/"
+              >Privacy Policy</a
+              >.</small
+            >
+            <small class="block ml-4 text-sm font-light leading-5 text-white"
+            >© 2023 EventPipe™, Inc. All rights reserved.</small
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+</body>
+</html>
