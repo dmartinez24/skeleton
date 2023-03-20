@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="/vite.svg" rel="icon" type="image/svg+xml" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Eventpipe</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="/images/icon.png" rel="shortcut icon" type="image/x-icon"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+        crossorigin="anonymous"
+        src="https://kit.fontawesome.com/e7f5e398d9.js"
+  ></script>
+
+  <style>
+    html, a, ul, p, div {
+      font-family: 'Poppins', sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <nav class="max-w-screen-xl mx-auto flex relative flex-wrap justify-between items-center py-2 leading-7 bg-white lg:flex-nowrap lg:justify-start text-zinc-800 ">
+    <div class="flex justify-between items-center px-3 w-full leading-7 text-zinc-800 ">
+      <a class="py-1 mr-4 text-xl leading-8 whitespace-nowrap cursor-pointer text-zinc-900 hover:text-zinc-900 focus:text-zinc-900 no-underline"
+         href="/">
+        <img
+              alt=""
+              class="w-full text-2xl align-middle max-w-[220px]"
+              src="/images/eventpipe-logo.png"
+        />
+      </a>
+
+      <button
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="inline-block py-2 px-5 m-0 text-xl font-medium leading-none text-center uppercase bg-amber-400 rounded border border-solid cursor-pointer lg:hidden border-neutral-200 text-neutral-500"
+            data-bs-target="#navbarScroll"
+            data-bs-toggle="collapse"
+            style="transition: none 0s ease 0s; text-decoration: none"
+            type="button"
+      >
+        <i
+              aria-hidden="true"
+              class="inline-block text-2xl not-italic font-black text-white uppercase fa fa-bars"
+              style="
+                font-variant: normal;
+                text-rendering: auto;
+                font-family: 'Font Awesome 5 Free';
+              "
+        ></i>
+      </button>
+
+      <div
+            class="hidden flex-wrap flex-grow items-center lg:flex lg:basis-auto basis-full"
+            id="navbarScroll"
+      >
+        <ul
+              class="flex overflow-y-auto flex-col pl-0 my-2 mr-auto lg:my-0 lg:flex-row lg:overflow-visible"
+              style="
+                --bs-scroll-height: 200px;
+                list-style: none;
+                max-height: 200px;
+              "
+        >
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Home</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/products"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Product</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/about"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >About Us</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/press"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Resources</a
+            >
+          </li>
+
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/demo"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Request Demo</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center px-2 text-zinc-800">
+              <span class="inline-block mr-4 text-lg"
+              ><a
+                    class="cursor-pointer underline text-lg text-[#00ADB3]"
+                    href="http://app.eventpipe.com/"
+              >Login</a
+              >
+                or
+              </span>
+          <a
+                class="inline-block py-2 px-5 font-medium text-white text-lg uppercase rounded cursor-pointer no-underline bg-[#00ADB3]"
+                href="https://app.eventpipe.com/search/auth/new/"
+          >Manage Reservation</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <section
+        class="py-20 my-6 leading-7 bg-no-repeat bg-contain text-zinc-800"
+        style='background-image: url("/images/banner-2.png"); background-position: center bottom;'
+  >
+    <div class="py-6 px-3 mx-auto w-full text-center">
+      <h1
+            class="mt-0 mb-4 text-5xl font-bold xl:text-6xl"
+      >
+        Privacy Policy
+      </h1>
+    </div>
+  </section>
+  <section class="py-4 leading-7 bg-stone-50 text-zinc-800">
+    <div class="flex justify-between px-3 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <span class="text-zinc-600 text-lg">Latest Update: March 3, 2023</span>
+      <a
+            class="text-[#00ADB3] cursor-pointer text-lg"
+            href="/legal/"
+      >View Versions History</a
+      >
+    </div>
+  </section>
+  <section class="leading-7 text-zinc-800">
+    <div class="p-12 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <div class="px-6">
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-2xl"
+              id="introduction"
+              style="line-height: 51.2px;"
+        >
+          Introduction
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          This Privacy Policy describes our policies on the collection, use, and
+          disclosure of information about you in connection with your use of our
+          services, including those offered through our websites, communications
+          (e.g., emails, phone calls, and texts), and mobile applications
+          (collectively, the “<strong class="font-medium">Service</strong>”). The
+          terms “<strong class="font-medium">we</strong>”, “<strong
+              class="font-medium"
+        >us</strong
+        >”, and “<strong class="font-medium">EventPipe</strong>” refer to
+          EventPipe, LLC, having an address of 36 Maplewood Ave, Portsmouth, NH
+          03801. When you use the Service, you consent to our collection, use, and
+          disclosure of information about you as described in this Privacy Policy.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          EventPipe regularly interacts with Partners, Hotels, Event Companies,
+          and Customers and makes corresponding and interaction between these
+          various entities simplified and easier. For this reason, Eventpipe may
+          collect, use, and share information related to these various entities.
+          While Eventpipe may interact with and share information, EventPipe
+          greatly respects the privacy of all the entities that Eventpipe
+          interacts with and will only share information necessary and appropriate
+          for the ease, and the like. When “You” is used herein, it means the user
+          or related, and may be referring to Partners, Hotels, Event Companies,
+          Customers, and the like.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.o9fipbltlh0"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="information-we-may-collect-use-and-process"
+              style="line-height: 51.2px;"
+        >
+          Information We May Collect, Use, and Process
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We do not sell, rent, trade or otherwise disclose Personal Information
+          concerning visitors to the Site, except as described herein. We may
+          share Personal Information provided by our Site visitors with third
+          parties we have retained to perform services on our behalf or as
+          necessary to process hotel reservations via our Site. In addition, we
+          may disclose Personal Information about you if we are required to do so
+          by law or pursuant to legal process, in order to respond to a request
+          from law enforcement authorities or other government officials, and/or
+          when we believe disclosure is necessary or appropriate to prevent
+          physical harm or financial loss or in connection with an investigation
+          of suspected or actual illegal activity. We also reserve the right to
+          transfer any Personal Information we have about you in the event that we
+          sell or transfer all or a portion of our business or assets.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We may collect various information related to Customers. We may collect,
+          process, transmit, and store information about you in connection with
+          your use of the Service, including any information you send to or
+          through the Service. We use that information to provide the Service’s
+          functionality, fulfill your requests, improve the Service’s quality,
+          engage in research and analysis relating to the Service, personalize
+          your experience, track usage of the Service, provide feedback to third
+          party businesses that are listed on the Service, display relevant
+          advertising, market the Service, provide customer support, message you,
+          back up our systems, allow for disaster recovery, enhance the security
+          of the Service, and comply with legal obligations. Even when we do not
+          retain such information, it still must be transmitted to our servers
+          initially and stored long enough to process.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Having accurate information permits us to provide you with a smooth,
+          efficient, and customized experience when visiting our site and/or using
+          our services. Specifically, we may collect and use the following
+          information:
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <strong class="font-medium">Personal Information</strong>:&nbsp;You may
+          visit our Site without disclosing any personally identifiable
+          information (“Personal Information”). However, you may also choose to
+          provide certain Personal Information, such as your name, address,
+          payment information, telephone number and/or email address on this Site.
+          The Personal Information that we collect from you during the reservation
+          process will be shared with Hotel(s) and the Agency Entity you booked
+          your reservation through to confirm your booking and to be able to
+          contact you if any issues with your booking arise.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <strong class="font-medium">Non-Personal Information:</strong>&nbsp;We
+          may collect certain aggregate and non-personal information when you
+          visit the Site. Aggregate and non-personal information does not relate
+          to a single, identifiable visitor. It tells us such things as how many
+          users visited our Site, how many reservations were made and the pages of
+          the Site that were accessed. By collecting this information, we learn
+          how to best tailor our Site to the needs of our visitors.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <strong class="font-medium">Communications:</strong>&nbsp;Our
+          communications with you, including phone calls, may be monitored and
+          recorded for quality purposes. When you sign up for an account or use
+          certain features, you are opting to receive messages from other users,
+          businesses, and Eventpipe. You can manage some of your messaging
+          preferences in your account settings, but note that you cannot opt out
+          of receiving certain administrative, transactional, or legal messages
+          from Eventpipe. We may also track your actions in response to the
+          messages you receive from us or through the Service, such as whether you
+          deleted, opened, or forwarded such messages, and share that information
+          with other parties to your messages. We reserve the right to refuse to
+          deliver messages we deem inappropriate. If you send or receive messages
+          through the Service via SMS text message, we may log phone numbers,
+          phone carriers, and the date and time that the messages were processed.
+          Carriers may charge recipients for texts that they receive. We may also
+          store information that you provide through communications to us,
+          including from phone calls, letters, emails and other electronic
+          messages, or in person. If you are a representative of a business listed
+          on Eventpipe, or use a phone number associated now or previously with
+          such a business, we may contact you, including by phone or email, using
+          the contact information you provide us, make publicly available, or that
+          we have on record for your business.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.sctmkxv5b712"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="third-parties"
+              style="line-height: 51.2px;"
+        >
+          Third Parties
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Third parties may receive information about you as follows:
+        </p>
+        <ul class="pl-8 mt-0 mb-4 list-disc">
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Partner or Agency:</strong> Generally,
+            Partners or Agency or Agencies are the entities that use Eventpipe to
+            manage services for Event Companies.
+          </li>
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Hotel:</strong> Partners will engage with,
+            share information with, and enter into various agreement types with
+            various Hotels. These agreements may include, but are not limited to,
+            negotiable room rates, room types, bulk pricing, and the like. Hotels
+            also have employees that may interact with and learn information about
+            Partners and the like.
+          </li>
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Event Companies:</strong> Event Companies
+            provide various services and are clients of the Partner, generally
+            speaking. Likewise, Event Companies may have employees and the like.
+          </li>
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Customers:</strong> Generally, Customers
+            means customers of the Event Companies. For example, Customers may
+            book a hotel reservation for an Event hosted or owned by the Event
+            Company.
+          </li>
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Service Providers:</strong> We rely on
+            third party service providers to support or provide services for us in
+            connection with your use of the Service, such as communications,
+            security and fraud prevention, technical and customer support,
+            tracking and reporting usage of the Service, quality assurance
+            testing, payment processing, marketing, and other functions. We share
+            information from or about you with these third party providers so that
+            they can perform their services or complete your requests.
+          </li>
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Legal Disclosure:</strong> We may
+            investigate and disclose information from or about you if we have a
+            good faith belief that such investigation is reasonably necessary to
+            comply with legal or law enforcement processes, such as a search
+            warrant, subpoena, statute, judicial proceeding, or other legal
+            process or law enforcement request; is helpful to prevent,
+            investigate, or identify possible wrongdoing in connection with the
+            Service; or protects our rights, reputation, property, or that of our
+            users, affiliates, or the public, such as disclosures in connection
+            with Eventpipe. If you flag or otherwise complain to us about content
+            through the Service, we may share the substance of your complaint with
+            the contributor of that content in order to provide an opportunity for
+            the contributor to respond.
+          </li>
+          <li class="text-base font-extralight text-left">
+            <strong class="font-medium">Links to Third-Party Web Sites:</strong>
+            This Site may contain links to external web sites operated by third
+            parties. Please be aware that these third-party web sites are governed
+            only by their own privacy policies. We cannot be responsible for these
+            policies.
+          </li>
+        </ul>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.lsuuiqfndhk0"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="personal-data-management"
+              style="line-height: 51.2px;"
+        >
+          Personal Data Management
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We only use your personal information to provide you the Eventpipe
+          services or to communicate with you about the services or the Website.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          With respect to any contact, payment information, or documents you may
+          choose to input or upload to Eventpipe, we take the privacy and
+          confidentiality of such information seriously.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We employ industry standard techniques to protect against unauthorized
+          access of data about you that we may store to carry out EventPipe
+          services , including personal information.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We do not share personal information you have provided to us without
+          your consent, unless:
+        </p>
+        <ul class="pl-8 mt-0 mb-4 list-disc">
+          <li class="text-base font-extralight text-left">
+            doing so is appropriate to carry out your own request;
+          </li>
+          <li class="text-base font-extralight text-left">
+            we believe it’s needed to enforce our Terms of Service, or that is
+            legally required;
+          </li>
+          <li class="text-base font-extralight text-left">
+            we believe it’s needed to detect, prevent or address fraud, security
+            or technical issues;
+          </li>
+          <li class="text-base font-extralight text-left">
+            otherwise protect our property, legal rights, or that of others.
+          </li>
+        </ul>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Eventpipe is operated from the United States. If you are visiting the
+          Website from outside the U.S., you agree to any processing of any
+          personal information you provide us according to this policy.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Eventpipe may contact you, by email or other means. For example,
+          Eventpipe may send you promotional emails, or communicate with you about
+          your use of the Eventpipe website. Eventpipe may also use technology to
+          alert us via a confirmation email when you open an email from us. You
+          can modify your email notification preferences by clicking the
+          appropriate link included in the footer of email notifications.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.lftnp9wzxtdd"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="safeguards--security"
+              style="line-height: 51.2px;"
+        >
+          Safeguards &amp; Security
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          The security of your Personal Information is important to us, and we
+          strive to implement and maintain reasonable, commercially acceptable
+          security procedures and practices appropriate to the nature of the
+          information we store, in order to protect it from unauthorized access,
+          destruction, use, modification, or disclosure. However, because no data
+          transmission is completely secure, and no system of physical or
+          electronic security is impenetrable, we cannot guarantee the security of
+          the information you send to us or the security of our servers, networks
+          or databases, and by using the Site you agree to assume all risk in
+          connection with the information sent to us or collected by us when you
+          access, visit and/or use the Site, including without limitation your
+          Personal Information, and we are not responsible for any loss of such
+          information or the consequences thereof.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.t9s760jdrv01"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="updates-to-this-policy"
+              style="line-height: 51.2px;"
+        >
+          Updates to this Policy
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We may revise this Privacy Policy from time to time. The most current
+          version of the Privacy Policy will govern our collection, use, and
+          disclosure of information. Please check the updated date for the latest
+          Privacy Policy and regularly check in with the Privacy Policy made
+          available on our website.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          By continuing to access or use the Service after those changes become
+          effective, you acEventpipeledge the revised Privacy Policy.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.xggl9moeyj4z"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="california-residents"
+              style="line-height: 51.2px;"
+        >
+          California Residents
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Under the California Consumer Privacy Act of 2018 (“<strong
+              class="font-medium"
+        >CCPA</strong
+        >”), California residents have certain rights regarding Eventpipe’s
+          collection, use, and sharing of their personal information. Eventpipe
+          does not sell your personal information and will not do so in the future
+          without providing you with notice and an opportunity to opt-out of such
+          sale as required by law. Similarly, we do not offer financial incentives
+          associated with our collection, use, or disclosure of your personal
+          information. Eventpipe collects various categories of personal
+          information when you use the Service, including identifiers, commercial
+          information, internet or other electronic network or device activity
+          information, geolocation data, and professional information.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          If you are a resident of California, you have the right to request to
+          Eventpipe what personal information has been collected about you, and to
+          access that information. You also have the right to request deletion of
+          your personal information, though exceptions under the CCPA may allow
+          Eventpipe to retain and use certain personal information notwithstanding
+          your deletion request. We will not discriminate against you for
+          exercising your rights under the CCPA. An agent may submit a request on
+          your behalf, but you must verify that your agent is authorized to do so.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.mrfw97e3pmes"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="gdpr"
+              style="line-height: 51.2px;"
+        >
+          GDPR
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Where applicable, this GDPR Privacy Notice is intended to supplement,
+          and not replace, our existing privacy policy). If there are any
+          conflicts between this GDPR Privacy Notice and our Privacy Policy, the
+          policy or portion that is more protective of Personal Data shall control
+          to the extent of such conflict.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Under the General Data Protection Regulation (“<strong
+              class="font-medium"
+        >GDPR</strong
+        >”), some residents have certain rights regarding Eventpipe’s
+          collection, use, and sharing of their personal information.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We collect Personal Data about you when you provide such Personal Data
+          directly to us, when third parties such as our business partners or
+          service providers provide us with Personal Data about you, or when
+          Personal Data about you is automatically collected in connection with
+          your use of our Services.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We receive certain Personal Data directly from you when you provide us
+          with such Personal Data, including without limitation the following:
+        </p>
+        <ul class="pl-8 mt-0 mb-4 list-disc">
+          <li class="text-base font-extralight text-left">First name</li>
+          <li class="text-base font-extralight text-left">Last name</li>
+          <li class="text-base font-extralight text-left">Email address</li>
+          <li class="text-base font-extralight text-left">Mailing address</li>
+          <li class="text-base font-extralight text-left">Telephone number</li>
+          <li class="text-base font-extralight text-left">Country</li>
+          <li class="text-base font-extralight text-left">
+            Credit card information
+          </li>
+          <li class="text-base font-extralight text-left">Group or Team name</li>
+          <li class="text-base font-extralight text-left">Organization name</li>
+        </ul>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We collect and process these categories of Personal Data as a matter of
+          contractual necessity so that we can provide the Services to you in
+          accordance with our Terms of Service. For example, we cannot fulfill
+          your reservation if you do not provide us with your first and last name.
+          When we process Personal Data due to contractual necessity, failure to
+          provide such Personal Data will result in your inability to use some or
+          all portions of the Services that require such Personal Data.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          We also use the Personal Data we collect directly from you to operate,
+          improve, understand and personalize our Services based on our legitimate
+          business interest in operating our Services in a way that benefits us
+          and our users. For example, we use the Personal Data to:
+        </p>
+        <ul class="pl-8 mt-0 mb-4 list-disc">
+          <li class="text-base font-extralight text-left">
+            Create and manage user profiles
+          </li>
+          <li class="text-base font-extralight text-left">
+            Communicate with you about the Services
+          </li>
+          <li class="text-base font-extralight text-left">
+            Contact you about Service announcements, updates or offers
+          </li>
+          <li class="text-base font-extralight text-left">
+            Provide support and assistance for the Services
+          </li>
+          <li class="text-base font-extralight text-left">
+            Personalize website content and communications based on your
+            preferences
+          </li>
+          <li class="text-base font-extralight text-left">
+            Meet contract or legal obligations
+          </li>
+          <li class="text-base font-extralight text-left">
+            Respond to user inquiries
+          </li>
+          <li class="text-base font-extralight text-left">
+            Fulfill user requests
+          </li>
+          <li class="text-base font-extralight text-left">
+            Comply with our legal or contractual obligations
+          </li>
+          <li class="text-base font-extralight text-left">Resolve disputes</li>
+          <li class="text-base font-extralight text-left">
+            Protect against or deter fraudulent, illegal or harmful actions
+          </li>
+        </ul>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.15s6pb3tn92k"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="contact"
+              style="line-height: 51.2px;"
+        >
+          Contact
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          You may contact us concerning this Policy by writing to us at the
+          following address:
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Eventpipe LLC Attn: Privacy Policy 36 Maplewood Ave, Portsmouth, NH
+          03801
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Or by email at:
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="mailto:privacy@eventpipe.com"
+                style="text-decoration: underline;"
+          >privacy@eventpipe.com</a
+          >
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          For security purposes, we will take such steps as we deem necessary to
+          confirm your identity before completing your request or sharing any
+          personal data with you.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          <a
+                class="text-blue-600 cursor-pointer hover:text-blue-700"
+                href="https://sites.google.com/eventpipe.com/eventpipe-termsandprivacy/privacy-policy-cookies-policy#h.t9an3sbs0r2l"
+                style="text-decoration: underline;"
+          ></a>
+        </p>
+        <h3
+              class="mt-0 mb-2 text-xl font-bold xl:text-3xl"
+              id="cookies-policy"
+              style="line-height: 51.2px;"
+        >
+          Cookies Policy
+        </h3>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          This Cookie Policy notifies you about our use of cookies when you visit
+          our Sites. By continuing to use the site, you consent to our use of
+          cookies. However, you can change your cookie settings, and choose
+          whether or not to accept cookies, at any time. Further information about
+          managing your cookie settings is provided.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          “Cookies”. A cookie is a small piece of text sent to your browser by a
+          website you visit. It helps the website to remember information about
+          your visit, like your preferred language and other settings. That can
+          make your next visit easier and the site more useful to you. Cookies
+          play an important role. Without them, using the web would be a much more
+          frustrating experience. We use two types of Cookies. These types are
+          described further below.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Our Use. We also use cookies to save your settings and preferences on
+          our Web site, such as language preference and information you have
+          previously entered when searching, options, and the like. Some
+          customization cookies are essential if you want to use certain features
+          of the Sites.
+        </p>
+        <p class="mt-0 mb-4 text-base font-extralight text-lg">
+          Essential Cookies. These cookies are necessary to help you access and
+          move around our site and use all its features. Without these cookies,
+          our website would not work properly and you would not be able to use
+          certain important features. For example, we use a cookie to keep you
+          logged in during your visit, so the site does not require you to log in
+          repeatedly to access different pages. We also use essential cookies for
+          fraud detection and prevention purposes. The reason for this is that
+          such cookies are necessary for you to access and use the content and
+          features of our Sites
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+</main>
+<footer>
+  <section class="py-6 leading-7 bg-[#093E60] text-zinc-800">
+    <div class="px-3 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <div
+            class="flex flex-row flex-wrap justify-between items-center md:flex-row-reverse"
+      >
+        <div class="flex flex-row">
+          <a
+                class="mx-2 text-3xl font-bold text-white cursor-pointer"
+                href="https://twitter.com/GetEventPipe"
+                style="text-decoration: underline; line-height: 54px;"
+                target="_blank"
+          ><i
+                aria-hidden="true"
+                class="inline-block text-4xl not-italic font-normal leading-none fab fa-twitter-square"
+                style='font-variant: normal; text-rendering: auto; font-family: "Font Awesome 5 Brands";'
+          ></i
+          ></a>
+          <a
+                class="text-3xl font-bold text-white cursor-pointer"
+                href="https://www.linkedin.com/company/eventpipe"
+                style="text-decoration: underline; line-height: 54px;"
+                target="_blank"
+          ><i
+                aria-hidden="true"
+                class="inline-block text-4xl not-italic font-normal leading-none fab fa-linkedin"
+                style='font-variant: normal; text-rendering: auto; font-family: "Font Awesome 5 Brands";'
+          ></i
+          ></a>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="">
+            <img
+                  alt=""
+                  class="align-middle"
+                  src="/images/icon-white.png"
+                  width="40px"
+            />
+          </div>
+          <div class="">
+            <small class="block ml-4 text-sm font-light leading-5 text-white"
+            >For details on how we use your information please see our
+              <a
+                    class="text-sm cursor-pointer underline"
+                    href="/legal/privacy/"
+              >Privacy Policy</a
+              >.</small
+            >
+            <small class="block ml-4 text-sm font-light leading-5 text-white"
+            >© 2023 EventPipe™, Inc. All rights reserved.</small
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+</body>
+</html>
