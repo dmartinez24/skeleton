@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link href="/vite.svg" rel="icon" type="image/svg+xml" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Eventpipe</title>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="/images/icon.png" rel="shortcut icon" type="image/x-icon"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+        crossorigin="anonymous"
+        src="https://kit.fontawesome.com/e7f5e398d9.js"
+  ></script>
+
+  <style>
+    html, a, ul, p, div {
+      font-family: 'Poppins', sans-serif;
+    }
+
+  </style>
+</head>
+<body>
+<header>
+  <nav class="max-w-screen-xl mx-auto flex relative flex-wrap justify-between items-center py-2 leading-7 bg-white lg:flex-nowrap lg:justify-start text-zinc-800 ">
+    <div class="flex justify-between items-center px-3 w-full leading-7 text-zinc-800 ">
+      <a class="py-1 mr-4 text-xl leading-8 whitespace-nowrap cursor-pointer text-zinc-900 hover:text-zinc-900 focus:text-zinc-900 no-underline"
+         href="/">
+        <img
+              alt=""
+              class="w-full text-2xl align-middle max-w-[220px]"
+              src="/images/eventpipe-logo.png"
+        />
+      </a>
+
+      <button
+            aria-controls="navbarScroll"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="inline-block py-2 px-5 m-0 text-xl font-medium leading-none text-center uppercase bg-amber-400 rounded border border-solid cursor-pointer lg:hidden border-neutral-200 text-neutral-500"
+            data-bs-target="#navbarScroll"
+            data-bs-toggle="collapse"
+            style="transition: none 0s ease 0s; text-decoration: none"
+            type="button"
+      >
+        <i
+              aria-hidden="true"
+              class="inline-block text-2xl not-italic font-black text-white uppercase fa fa-bars"
+              style="
+                font-variant: normal;
+                text-rendering: auto;
+                font-family: 'Font Awesome 5 Free';
+              "
+        ></i>
+      </button>
+
+      <div
+            class="hidden flex-wrap flex-grow items-center lg:flex lg:basis-auto basis-full"
+            id="navbarScroll"
+      >
+        <ul
+              class="flex overflow-y-auto flex-col pl-0 my-2 mr-auto lg:my-0 lg:flex-row lg:overflow-visible"
+              style="
+                --bs-scroll-height: 200px;
+                list-style: none;
+                max-height: 200px;
+              "
+        >
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Home</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/products"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Product</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/about"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >About Us</a
+            >
+          </li>
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/press"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Resources</a
+            >
+          </li>
+
+          <li class="text-left" style="list-style: outside none none">
+            <a
+                  class="block py-2 px-0 font-normal cursor-pointer lg:px-2 text-neutral-500 hover:text-[#00ADB3] focus:text-neutral-600 text-lg text-zinc-800"
+                  href="/demo"
+                  style="
+                    text-decoration: none;
+                    transition: all 0.3s ease 0s;
+                    list-style: outside none none;
+                  "
+            >Request Demo</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center px-2 text-zinc-800">
+              <span class="inline-block mr-4 text-lg"
+              ><a
+                    class="cursor-pointer underline text-lg text-[#00ADB3]"
+                    href="http://app.eventpipe.com/"
+              >Login</a
+              >
+                or
+              </span>
+          <a
+                class="inline-block py-2 px-5 font-medium text-white text-lg uppercase rounded cursor-pointer no-underline bg-[#00ADB3]"
+                href="https://app.eventpipe.com/search/auth/new/"
+          >Manage Reservation</a
+          >
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+  <section
+        class="py-20 my-6 leading-7 bg-no-repeat bg-contain text-zinc-800"
+        style='background-image: url("/images/banner-2.png"); background-position: center bottom;'
+  >
+    <div class="py-6 px-3 mx-auto w-full text-center">
+      <h1
+            class="mt-0 mb-4 text-5xl font-bold xl:text-6xl"
+      >
+        Resources
+      </h1>
+    </div>
+  </section>
+  <section class="py-20 leading-7 text-center bg-stone-50 text-zinc-800">
+    <div class="px-3 mx-auto w-full text-center max-w-screen-xl">
+      <h6
+            class="my-0 text-lg font-light text-[#00ADB3] uppercase"
+      >
+        our latest news
+      </h6>
+      <h2
+            class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+      >
+        EventPipe Press Releases
+      </h2>
+
+      <div class="px-6 text-left">
+        <div
+              class="flex flex-row justify-between items-center py-4 border-solid border-y border-zinc-200"
+        >
+          <span class="font-light text-zinc-600 text-lg">August 8, 2022</span>
+          <h5 class="my-0 mx-4 text-xl font-medium">
+            EventPipe™ ANNOUNCES PLANS TO EXPAND PLATFORM AND ACCELERATE GROWTH
+          </h5>
+          <a
+                class="flex flex-row flex-nowrap items-center font-light text-[#00ADB3] text-lg cursor-pointer"
+                href="https://www.eventpipe.com/press/eventpipe-ceo/"
+          >Read <i class="italic bi bi-arrow-right"></i
+          ></a>
+        </div>
+
+        <div
+              class="flex flex-row justify-between items-center py-4 border-solid border-y border-zinc-200"
+        >
+          <span class="font-light text-zinc-600 text-lg">August 30, 2021</span>
+          <h5 class="my-0 mx-4 text-xl font-medium">
+            EventPipe™, modern event housing management, released for general
+            availability
+          </h5>
+          <a
+                class="flex flex-row flex-nowrap items-center font-light text-[#00ADB3] text-lg cursor-pointer"
+                href="https://www.eventpipe.com/press/eventpipe/"
+          >Read <i class="italic bi bi-arrow-right"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-20 leading-7 text-center text-zinc-800">
+    <div class="px-3 mx-auto w-full text-center mx-auto max-w-screen-xl">
+      <h6
+            class="my-0 text-lg font-light text-[#00ADB3] uppercase"
+      >
+        on social media
+      </h6>
+      <h2
+            class="mt-0 mb-6 text-3xl font-bold xl:text-4xl"
+      >
+        EventPipe Buzz
+      </h2>
+
+      <div
+            class="block clear-both relative flex-grow-0 flex-shrink-0 pb-6 max-w-full bg-transparent basis-full focus:outline-zinc-300"
+            dir="ltr"
+            id="curator-feed-default-feed-layout"
+            style="min-height: 400px;"
+      >
+        <div class="text-zinc-800" style="transition: none 0s ease 0s;"></div>
+        <div class="w-full text-zinc-800" style="transition: none 0s ease 0s;">
+          <div
+                aria-label="There are 4 posts in the feed"
+                class="block clear-both overflow-hidden w-full h-0"
+                role="feed"
+                style='transition: none 0s ease 0s; content: " ";'
+                tabindex="0"
+          >
+            <div
+                  class="float-left w-1/4"
+                  style="width: 25%; float: left; box-sizing: border-box; transition: none 0s ease 0s;"
+            >
+              <article
+                    aria-label="Post 1, Twitter post by EventPipe Oh, and one more thing. The whole team is very excited to announce the closing of a $2.2 million seed press enter to read more"
+                    class="overflow-hidden relative mx-2 mt-0 mb-5 border border-zinc-100 text-neutral-800"
+                    data-position="1"
+                    data-post="276666353"
+                    role="article"
+                    style="margin-bottom: 20px; margin-right: 10px; margin-left: 10px; transition: none 0s ease 0s; z-index: 1;"
+                    tabindex="0"
+              >
+                <div
+                      class="rounded-none border border-solid border-zinc-100"
+                      style="transition: none 0s ease 0s;"
+                >
+                  <div class="" style="transition: none 0s ease 0s;">
+                    <div
+                          class="overflow-hidden relative"
+                          style="transition: none 0s ease 0s;"
+                    >
+                      <div class="" style="transition: none 0s ease 0s;">
+                      <span
+                            class="hidden absolute top-0 left-0 w-full h-full cursor-pointer"
+                            style="transition: none 0s ease 0s;"
+                      ><i
+                            class="absolute top-1/2 left-1/2 -mt-5 -ml-3 w-0 h-0 italic border-solid opacity-0 border-zinc-100"
+                            style='transition: opacity 0.6s ease 0s; z-index: 1; content: ""; border-top-width: 20px; border-bottom-width: 20px; border-left-width: 24px;'
+                      ></i></span
+                      ><img
+                            alt="Image posted by GetEventPipe to twitter"
+                            class="w-full align-middle opacity-100"
+                            src="https://pbs.twimg.com/media/FZp4Wh8XgAAdjnI.jpg:medium"
+                            style="opacity: 1; transition: none 0s ease 0s;"
+                            tabindex="0"
+                      />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                        class="relative pt-6 my-0 mx-4 border border-transparent border-dotted"
+                        style="transition: none 0s ease 0s;"
+                  >
+                  <span
+                        aria-label="Twitter"
+                        class="block mb-3"
+                        role="link"
+                        style="transition: none 0s ease 0s;"
+                        tabindex="0"
+                  ><svg
+                        aria-label="Twitter icon"
+                        class="inline-block w-6 h-auto text-[#00ADB3] align-middle"
+                        style="transition: none 0s ease 0s; fill: currentcolor; max-height: 24px;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                  ></span>
+                    <div
+                          class="block mb-1 truncate"
+                          style="transition: none 0s ease 0s; font-weight: bold;"
+                    >
+                      <a
+                            class="font-bold whitespace-nowrap cursor-pointer"
+                            href="https://www.twitter.com/GetEventPipe"
+                            role="heading"
+                            style="text-decoration: none; transition: color 0.2s linear 0s;"
+                            target="_blank"
+                      >EventPipe</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                        class="px-4 pt-0 pb-6 text-base leading-5 break-words"
+                        style="transition: none 0s ease 0s; word-break: break-word;"
+                  >
+                    Oh, and one more thing. The whole team is very excited to
+                    announce the closing of a $2.2 million seed investment led by
+                    Velocior Ventures and the announcement of
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/BrownDotNet"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >@BrownDotNet</a
+                    >
+                    as our new CEO!
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/search?q=%23GetEventPipe"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >#GetEventPipe</a
+                    >
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://t.co/qruc07iFWi"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >https://t.co/qruc07iFWi</a
+                    >
+                  </div>
+                  <div
+                        class="relative h-10 leading-10 border-t border-solid border-neutral-200"
+                        style="transition: none 0s ease 0s;"
+                  >
+                    <img
+                          alt="Profile image for EventPipe"
+                          aria-label="Profile image for EventPipe"
+                          class="absolute w-6 h-auto align-middle"
+                          src="https://pbs.twimg.com/profile_images/1420059174847893506/AW19GaMJ_normal.png"
+                          style="transition: none 0s ease 0s; border-radius: 50%; top: 7px; left: 10px;"
+                          tabindex="0"
+                    /><span
+                        class="absolute py-0 px-1 text-xs uppercase opacity-0 truncate"
+                        style="padding: 0px 5px; transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden="true"
+                        class="text-sm uppercase whitespace-nowrap cursor-pointer"
+                        href="https://www.twitter.com/GetEventPipe"
+                        style="text-decoration: underline; transition: color 0.2s linear 0s;"
+                        tabindex="-1"
+                        target="_blank"
+                  >@GetEventPipe</a
+                  ></span
+                  ><span class="mt-0" style="transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden=""
+                        class="text-xs uppercase opacity-50 cursor-pointer"
+                        href="https://twitter.com/GetEventPipe/statuses/1556688955940257793"
+                        style="text-decoration: none; transition: color 0.2s linear 0s;"
+                        tabindex="0"
+                        target="_blank"
+                  >Aug 8, 2022</a
+                  ></span
+                  >
+                    <div
+                          class="absolute top-0 text-sm text-right"
+                          style="transition: none 0s ease 0s; right: 10px; box-shadow: none;"
+                    >
+                    <span
+                          class="text-base"
+                          style="transition: none 0s ease 0s;"
+                    ></span
+                    ><a
+                          aria-label="Share to facebook"
+                          class="inline-block text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Facebook icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24px"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M16.403,9H14V7c0-1.032,0.084-1.682,1.563-1.682h0.868c0.552,0,1-0.448,1-1V3.064c0-0.523-0.401-0.97-0.923-1.005C15.904,2.018,15.299,1.999,14.693,2C11.98,2,10,3.657,10,6.699V9H8c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1l2-0.001V21c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-8.003l2.174-0.001c0.508,0,0.935-0.381,0.993-0.886l0.229-1.996C17.465,9.521,17.001,9,16.403,9z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg></a
+                    ><a
+                          aria-label="Share to twitter"
+                          class="inline-block ml-2 text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Twitter icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                    ></a>
+                    </div>
+                  </div>
+                  <div class="hidden m-2" style="transition: none 0s ease 0s;">
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                  <div
+                        class="hidden absolute bottom-0 left-0 pt-16 pb-2 m-0 w-full"
+                        style="transition: none 0s ease 0s; background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(239, 239, 239) 50%);"
+                  >
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                </div>
+                <span
+                      aria-label="End of post."
+                      class="absolute bottom-0 mt-px w-full h-px opacity-0"
+                      role=""
+                      style="transition: none 0s ease 0s;"
+                      tabindex="0"
+                ></span>
+              </article>
+            </div>
+            <div
+                  class="float-left w-1/4"
+                  style="width: 25%; float: left; box-sizing: border-box; transition: none 0s ease 0s;"
+            >
+              <article
+                    aria-label="Post 2, Twitter post by EventPipe We have touched down in Detroit for @connectmeetings. Come check out our awesome booth 1526 and get some popcorn! Excited press enter to read more"
+                    class="overflow-hidden relative mx-2 mt-0 mb-5 border border-zinc-100 text-neutral-800"
+                    data-position="2"
+                    data-post="276666354"
+                    role="article"
+                    style="margin-bottom: 20px; margin-right: 10px; margin-left: 10px; transition: none 0s ease 0s; z-index: 1;"
+                    tabindex="0"
+              >
+                <div
+                      class="rounded-none border border-solid border-zinc-100"
+                      style="transition: none 0s ease 0s;"
+                >
+                  <div class="" style="transition: none 0s ease 0s;">
+                    <div
+                          class="overflow-hidden relative"
+                          style="transition: none 0s ease 0s;"
+                    >
+                      <div class="" style="transition: none 0s ease 0s;">
+                      <span
+                            class="hidden absolute top-0 left-0 w-full h-full cursor-pointer"
+                            style="transition: none 0s ease 0s;"
+                      ><i
+                            class="absolute top-1/2 left-1/2 -mt-5 -ml-3 w-0 h-0 italic border-solid opacity-0 border-zinc-100"
+                            style='transition: opacity 0.6s ease 0s; z-index: 1; content: ""; border-top-width: 20px; border-bottom-width: 20px; border-left-width: 24px;'
+                      ></i></span
+                      ><img
+                            alt="Image posted by GetEventPipe to twitter"
+                            class="w-full align-middle opacity-100"
+                            src="https://pbs.twimg.com/media/FZp3a8oXoAA7QyI.jpg:medium"
+                            style="opacity: 1; transition: none 0s ease 0s;"
+                            tabindex="0"
+                      />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                        class="relative pt-6 my-0 mx-4 border border-transparent border-dotted"
+                        style="transition: none 0s ease 0s;"
+                  >
+                  <span
+                        aria-label="Twitter"
+                        class="block mb-3"
+                        role="link"
+                        style="transition: none 0s ease 0s;"
+                        tabindex="0"
+                  ><svg
+                        aria-label="Twitter icon"
+                        class="inline-block w-6 h-auto text-[#00ADB3] align-middle"
+                        style="transition: none 0s ease 0s; fill: currentcolor; max-height: 24px;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                  ></span>
+                    <div
+                          class="block mb-1 truncate"
+                          style="transition: none 0s ease 0s; font-weight: bold;"
+                    >
+                      <a
+                            class="font-bold whitespace-nowrap cursor-pointer"
+                            href="https://www.twitter.com/GetEventPipe"
+                            role="heading"
+                            style="text-decoration: none; transition: color 0.2s linear 0s;"
+                            target="_blank"
+                      >EventPipe</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                        class="px-4 pt-0 pb-6 text-base leading-5 break-words"
+                        style="transition: none 0s ease 0s; word-break: break-word;"
+                  >
+                    We have touched down in Detroit for
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/connectmeetings"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >@connectmeetings</a
+                    >. Come check out our awesome booth 1526 and get some popcorn!
+                    Excited for the week!
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/search?q=%23PipeCorn"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >#PipeCorn</a
+                    >
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/search?q=%23ConnectDetroit"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >#ConnectDetroit</a
+                    >
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://t.co/77HI96oYyV"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >https://t.co/77HI96oYyV</a
+                    >
+                  </div>
+                  <div
+                        class="relative h-10 leading-10 border-t border-solid border-neutral-200"
+                        style="transition: none 0s ease 0s;"
+                  >
+                    <img
+                          alt="Profile image for EventPipe"
+                          aria-label="Profile image for EventPipe"
+                          class="absolute w-6 h-auto align-middle"
+                          src="https://pbs.twimg.com/profile_images/1420059174847893506/AW19GaMJ_normal.png"
+                          style="transition: none 0s ease 0s; border-radius: 50%; top: 7px; left: 10px;"
+                          tabindex="0"
+                    /><span
+                        class="absolute py-0 px-1 text-xs uppercase opacity-0 truncate"
+                        style="padding: 0px 5px; transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden="true"
+                        class="text-sm uppercase whitespace-nowrap cursor-pointer"
+                        href="https://www.twitter.com/GetEventPipe"
+                        style="text-decoration: underline; transition: color 0.2s linear 0s;"
+                        tabindex="-1"
+                        target="_blank"
+                  >@GetEventPipe</a
+                  ></span
+                  ><span class="mt-0" style="transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden=""
+                        class="text-xs uppercase opacity-50 cursor-pointer"
+                        href="https://twitter.com/GetEventPipe/statuses/1556687931749933057"
+                        style="text-decoration: none; transition: color 0.2s linear 0s;"
+                        tabindex="0"
+                        target="_blank"
+                  >Aug 8, 2022</a
+                  ></span
+                  >
+                    <div
+                          class="absolute top-0 text-sm text-right"
+                          style="transition: none 0s ease 0s; right: 10px; box-shadow: none;"
+                    >
+                    <span
+                          class="text-base"
+                          style="transition: none 0s ease 0s;"
+                    ></span
+                    ><a
+                          aria-label="Share to facebook"
+                          class="inline-block text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Facebook icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24px"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M16.403,9H14V7c0-1.032,0.084-1.682,1.563-1.682h0.868c0.552,0,1-0.448,1-1V3.064c0-0.523-0.401-0.97-0.923-1.005C15.904,2.018,15.299,1.999,14.693,2C11.98,2,10,3.657,10,6.699V9H8c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1l2-0.001V21c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-8.003l2.174-0.001c0.508,0,0.935-0.381,0.993-0.886l0.229-1.996C17.465,9.521,17.001,9,16.403,9z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg></a
+                    ><a
+                          aria-label="Share to twitter"
+                          class="inline-block ml-2 text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Twitter icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                    ></a>
+                    </div>
+                  </div>
+                  <div class="hidden m-2" style="transition: none 0s ease 0s;">
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                  <div
+                        class="hidden absolute bottom-0 left-0 pt-16 pb-2 m-0 w-full"
+                        style="transition: none 0s ease 0s; background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(239, 239, 239) 50%);"
+                  >
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                </div>
+                <span
+                      aria-label="End of post."
+                      class="absolute bottom-0 mt-px w-full h-px opacity-0"
+                      role=""
+                      style="transition: none 0s ease 0s;"
+                      tabindex="0"
+                ></span>
+              </article>
+            </div>
+            <div
+                  class="float-left w-1/4"
+                  style="width: 25%; float: left; box-sizing: border-box; transition: none 0s ease 0s;"
+            >
+              <article
+                    aria-label="Post 3, Twitter post by EventPipe Countdown to @connectmeetings in Detroit is on! #TBT to our amazing launch party at last year's event. The team has press enter to read more"
+                    class="overflow-hidden relative mx-2 mt-0 mb-5 border border-zinc-100 text-neutral-800"
+                    data-position="3"
+                    data-post="274643739"
+                    role="article"
+                    style="margin-bottom: 20px; margin-right: 10px; margin-left: 10px; transition: none 0s ease 0s; z-index: 1;"
+                    tabindex="0"
+              >
+                <div
+                      class="rounded-none border border-solid border-zinc-100"
+                      style="transition: none 0s ease 0s;"
+                >
+                  <div class="" style="transition: none 0s ease 0s;">
+                    <div
+                          class="overflow-hidden relative"
+                          style="transition: none 0s ease 0s;"
+                    >
+                      <div class="" style="transition: none 0s ease 0s;">
+                      <span
+                            class="hidden absolute top-0 left-0 w-full h-full cursor-pointer"
+                            style="transition: none 0s ease 0s;"
+                      ><i
+                            class="absolute top-1/2 left-1/2 -mt-5 -ml-3 w-0 h-0 italic border-solid opacity-0 border-zinc-100"
+                            style='transition: opacity 0.6s ease 0s; z-index: 1; content: ""; border-top-width: 20px; border-bottom-width: 20px; border-left-width: 24px;'
+                      ></i></span
+                      ><img
+                            alt="Image posted by GetEventPipe to twitter"
+                            class="w-full align-middle opacity-100"
+                            src="https://pbs.twimg.com/media/FYwXq8qX0AIVnuc.jpg:medium"
+                            style="opacity: 1; transition: none 0s ease 0s;"
+                            tabindex="0"
+                      />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                        class="relative pt-6 my-0 mx-4 border border-transparent border-dotted"
+                        style="transition: none 0s ease 0s;"
+                  >
+                  <span
+                        aria-label="Twitter"
+                        class="block mb-3"
+                        role="link"
+                        style="transition: none 0s ease 0s;"
+                        tabindex="0"
+                  ><svg
+                        aria-label="Twitter icon"
+                        class="inline-block w-6 h-auto text-[#00ADB3] align-middle"
+                        style="transition: none 0s ease 0s; fill: currentcolor; max-height: 24px;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                  ></span>
+                    <div
+                          class="block mb-1 truncate"
+                          style="transition: none 0s ease 0s; font-weight: bold;"
+                    >
+                      <a
+                            class="font-bold whitespace-nowrap cursor-pointer"
+                            href="https://www.twitter.com/GetEventPipe"
+                            role="heading"
+                            style="text-decoration: none; transition: color 0.2s linear 0s;"
+                            target="_blank"
+                      >EventPipe</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                        class="px-4 pt-0 pb-6 text-base leading-5 break-words"
+                        style="transition: none 0s ease 0s; word-break: break-word;"
+                  >
+                    Countdown to
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/connectmeetings"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >@connectmeetings</a
+                    >
+                    in Detroit is on!
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/search?q=%23TBT"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >#TBT</a
+                    >
+                    to our amazing launch party at last year's event. The team has
+                    grown quite a bit since then, and we've got some more exciting
+                    news to share coming soon! 👀
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://t.co/KjeyF3MuLX"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >https://t.co/KjeyF3MuLX</a
+                    >
+                  </div>
+                  <div
+                        class="relative h-10 leading-10 border-t border-solid border-neutral-200"
+                        style="transition: none 0s ease 0s;"
+                  >
+                    <img
+                          alt="Profile image for EventPipe"
+                          aria-label="Profile image for EventPipe"
+                          class="absolute w-6 h-auto align-middle"
+                          src="https://pbs.twimg.com/profile_images/1420059174847893506/AW19GaMJ_normal.png"
+                          style="transition: none 0s ease 0s; border-radius: 50%; top: 7px; left: 10px;"
+                          tabindex="0"
+                    /><span
+                        class="absolute py-0 px-1 text-xs uppercase opacity-0 truncate"
+                        style="padding: 0px 5px; transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden="true"
+                        class="text-sm uppercase whitespace-nowrap cursor-pointer"
+                        href="https://www.twitter.com/GetEventPipe"
+                        style="text-decoration: underline; transition: color 0.2s linear 0s;"
+                        tabindex="-1"
+                        target="_blank"
+                  >@GetEventPipe</a
+                  ></span
+                  ><span class="mt-0" style="transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden=""
+                        class="text-xs uppercase opacity-50 cursor-pointer"
+                        href="https://twitter.com/GetEventPipe/statuses/1552648191761342469"
+                        style="text-decoration: none; transition: color 0.2s linear 0s;"
+                        tabindex="0"
+                        target="_blank"
+                  >Jul 28, 2022</a
+                  ></span
+                  >
+                    <div
+                          class="absolute top-0 text-sm text-right"
+                          style="transition: none 0s ease 0s; right: 10px; box-shadow: none;"
+                    >
+                    <span
+                          class="text-base"
+                          style="transition: none 0s ease 0s;"
+                    ></span
+                    ><a
+                          aria-label="Share to facebook"
+                          class="inline-block text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Facebook icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24px"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M16.403,9H14V7c0-1.032,0.084-1.682,1.563-1.682h0.868c0.552,0,1-0.448,1-1V3.064c0-0.523-0.401-0.97-0.923-1.005C15.904,2.018,15.299,1.999,14.693,2C11.98,2,10,3.657,10,6.699V9H8c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1l2-0.001V21c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-8.003l2.174-0.001c0.508,0,0.935-0.381,0.993-0.886l0.229-1.996C17.465,9.521,17.001,9,16.403,9z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg></a
+                    ><a
+                          aria-label="Share to twitter"
+                          class="inline-block ml-2 text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Twitter icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                    ></a>
+                    </div>
+                  </div>
+                  <div class="hidden m-2" style="transition: none 0s ease 0s;">
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                  <div
+                        class="hidden absolute bottom-0 left-0 pt-16 pb-2 m-0 w-full"
+                        style="transition: none 0s ease 0s; background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(239, 239, 239) 50%);"
+                  >
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                </div>
+                <span
+                      aria-label="End of post."
+                      class="absolute bottom-0 mt-px w-full h-px opacity-0"
+                      role=""
+                      style="transition: none 0s ease 0s;"
+                      tabindex="0"
+                ></span>
+              </article>
+            </div>
+            <div
+                  class="float-left w-1/4"
+                  style="width: 25%; float: left; box-sizing: border-box; transition: none 0s ease 0s;"
+            >
+              <article
+                    aria-label="Post 4, Twitter post by EventPipe Incredibly excited to be meeting with so many great folks at @Sports_ETA Symposium in Birmingham! Come on over and say press enter to read more"
+                    class="overflow-hidden relative mx-2 mt-0 mb-5 border border-zinc-100 text-neutral-800"
+                    data-position="4"
+                    data-post="219017881"
+                    role="article"
+                    style="margin-bottom: 20px; margin-right: 10px; margin-left: 10px; transition: none 0s ease 0s; z-index: 1;"
+                    tabindex="0"
+              >
+                <div
+                      class="rounded-none border border-solid border-zinc-100"
+                      style="transition: none 0s ease 0s;"
+                >
+                  <div class="" style="transition: none 0s ease 0s;">
+                    <div
+                          class="overflow-hidden relative"
+                          style="transition: none 0s ease 0s;"
+                    >
+                      <div class="" style="transition: none 0s ease 0s;">
+                      <span
+                            class="hidden absolute top-0 left-0 w-full h-full cursor-pointer"
+                            style="transition: none 0s ease 0s;"
+                      ><i
+                            class="absolute top-1/2 left-1/2 -mt-5 -ml-3 w-0 h-0 italic border-solid opacity-0 border-zinc-100"
+                            style='transition: opacity 0.6s ease 0s; z-index: 1; content: ""; border-top-width: 20px; border-bottom-width: 20px; border-left-width: 24px;'
+                      ></i></span
+                      ><img
+                            alt="Image posted by GetEventPipe to twitter"
+                            class="w-full align-middle opacity-100"
+                            src="https://pbs.twimg.com/media/FCuPkjyWYAMonwE.jpg:medium"
+                            style="opacity: 1; transition: none 0s ease 0s;"
+                            tabindex="0"
+                      />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                        class="relative pt-6 my-0 mx-4 border border-transparent border-dotted"
+                        style="transition: none 0s ease 0s;"
+                  >
+                  <span
+                        aria-label="Twitter"
+                        class="block mb-3"
+                        role="link"
+                        style="transition: none 0s ease 0s;"
+                        tabindex="0"
+                  ><svg
+                        aria-label="Twitter icon"
+                        class="inline-block w-6 h-auto text-[#00ADB3] align-middle"
+                        style="transition: none 0s ease 0s; fill: currentcolor; max-height: 24px;"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                  >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                  ></span>
+                    <div
+                          class="block mb-1 truncate"
+                          style="transition: none 0s ease 0s; font-weight: bold;"
+                    >
+                      <a
+                            class="font-bold whitespace-nowrap cursor-pointer"
+                            href="https://www.twitter.com/GetEventPipe"
+                            role="heading"
+                            style="text-decoration: none; transition: color 0.2s linear 0s;"
+                            target="_blank"
+                      >EventPipe</a
+                      >
+                    </div>
+                  </div>
+                  <div
+                        class="px-4 pt-0 pb-6 text-base leading-5 break-words"
+                        style="transition: none 0s ease 0s; word-break: break-word;"
+                  >
+                    Incredibly excited to be meeting with so many great folks at
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/Sports_ETA"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >@Sports_ETA</a
+                    >
+                    Symposium in Birmingham! Come on over and say hello!
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://twitter.com/search?q=%23EventPipeBuzz"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >#EventPipeBuzz</a
+                    >
+                    <a
+                          class="text-[#00ADB3] cursor-pointer hover:text-black"
+                          href="https://t.co/gmV21Xb3QJ"
+                          rel="noopener"
+                          style="text-decoration: underline; transition: color 0.2s linear 0s; word-break: break-word;"
+                          target="_blank"
+                    >https://t.co/gmV21Xb3QJ</a
+                    >
+                  </div>
+                  <div
+                        class="relative h-10 leading-10 border-t border-solid border-neutral-200"
+                        style="transition: none 0s ease 0s;"
+                  >
+                    <img
+                          alt="Profile image for EventPipe"
+                          aria-label="Profile image for EventPipe"
+                          class="absolute w-6 h-auto align-middle"
+                          src="https://pbs.twimg.com/profile_images/1420059174847893506/AW19GaMJ_normal.png"
+                          style="transition: none 0s ease 0s; border-radius: 50%; top: 7px; left: 10px;"
+                          tabindex="0"
+                    /><span
+                        class="absolute py-0 px-1 text-xs uppercase opacity-0 truncate"
+                        style="padding: 0px 5px; transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden="true"
+                        class="text-sm uppercase whitespace-nowrap cursor-pointer"
+                        href="https://www.twitter.com/GetEventPipe"
+                        style="text-decoration: underline; transition: color 0.2s linear 0s;"
+                        tabindex="-1"
+                        target="_blank"
+                  >@GetEventPipe</a
+                  ></span
+                  ><span class="mt-0" style="transition: none 0s ease 0s;"
+                  ><a
+                        aria-hidden=""
+                        class="text-xs uppercase opacity-50 cursor-pointer"
+                        href="https://twitter.com/GetEventPipe/statuses/1453413169318305792"
+                        style="text-decoration: none; transition: color 0.2s linear 0s;"
+                        tabindex="0"
+                        target="_blank"
+                  >Oct 27, 2021</a
+                  ></span
+                  >
+                    <div
+                          class="absolute top-0 text-sm text-right"
+                          style="transition: none 0s ease 0s; right: 10px; box-shadow: none;"
+                    >
+                    <span
+                          class="text-base"
+                          style="transition: none 0s ease 0s;"
+                    ></span
+                    ><a
+                          aria-label="Share to facebook"
+                          class="inline-block text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Facebook icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24px"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M16.403,9H14V7c0-1.032,0.084-1.682,1.563-1.682h0.868c0.552,0,1-0.448,1-1V3.064c0-0.523-0.401-0.97-0.923-1.005C15.904,2.018,15.299,1.999,14.693,2C11.98,2,10,3.657,10,6.699V9H8c-0.552,0-1,0.448-1,1v2c0,0.552,0.448,1,1,1l2-0.001V21c0,0.552,0.448,1,1,1h2c0.552,0,1-0.448,1-1v-8.003l2.174-0.001c0.508,0,0.935-0.381,0.993-0.886l0.229-1.996C17.465,9.521,17.001,9,16.403,9z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg></a
+                    ><a
+                          aria-label="Share to twitter"
+                          class="inline-block ml-2 text-base opacity-30 cursor-pointer hover:opacity-100"
+                          role="link"
+                          style="text-decoration: underline; transition: opacity 0.3s linear 0s;"
+                          tabindex="0"
+                    ><svg
+                          aria-label="Twitter icon"
+                          class="inline-block mt-2 w-4 align-top"
+                          height="24"
+                          style="transition: none 0s ease 0s; fill: currentcolor;"
+                          viewBox="0 0 24 24"
+                          width="24"
+                          xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                            class=""
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"
+                            style="transition: none 0s ease 0s;"
+                      ></path></svg
+                    ></a>
+                    </div>
+                  </div>
+                  <div class="hidden m-2" style="transition: none 0s ease 0s;">
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                  <div
+                        class="hidden absolute bottom-0 left-0 pt-16 pb-2 m-0 w-full"
+                        style="transition: none 0s ease 0s; background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgb(239, 239, 239) 50%);"
+                  >
+                    <button
+                          class="inline-block py-0 px-4 m-0 h-10 leading-10 normal-case rounded-sm border-0 cursor-pointer bg-zinc-300 text-stone-500"
+                          style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+                    >
+                      Read more
+                    </button>
+                  </div>
+                </div>
+                <span
+                      aria-label="End of post."
+                      class="absolute bottom-0 mt-px w-full h-px opacity-0"
+                      role=""
+                      style="transition: none 0s ease 0s;"
+                      tabindex="0"
+                ></span>
+              </article>
+            </div>
+          </div>
+          <div
+                class=""
+                style="overflow-anchor: none; transition: none 0s ease 0s;"
+          >
+            <button
+                  aria-label="click to load more posts"
+                  class="inline-block py-5 px-8 m-0 normal-case rounded-none border border-solid cursor-pointer border-zinc-100 text-neutral-800"
+                  style="transition: none 0s ease 0s; text-decoration: none; box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;"
+            >
+            <span class="" style="transition: none 0s ease 0s;">
+              Load more</span
+            >
+            </button>
+          </div>
+        </div>
+        <a
+              class="block absolute text-sm leading-6 text-black cursor-pointer"
+              href="https://curator.io"
+              style="text-decoration: none; transition: none 0s ease 0s; bottom: 5px; right: 10px; z-index: 999;"
+              target="_blank"
+        >Powered by Curator.io</a
+        >
+      </div>
+      <script class="text-zinc-800" type="text/javascript">
+        (function(){
+          var i,e,d=document,s="script";i=d.createElement("script");i.async=1;i.charset="UTF-8";
+          i.src="https://cdn.curator.io/published/56448a48-4b6a-4746-941b-c50770f97adf.js";
+          e=d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
+        })();
+      </script>
+    </div>
+  </section>
+
+
+</main>
+<footer>
+  <section
+        class="py-12 px-0 leading-7 bg-no-repeat bg-contain bg-stone-50 text-zinc-800"
+        style='background-image: url("/images/logo-shape.png");'
+  >
+    <div class="px-3 mx-auto w-full text-zinc-800 mx-auto max-w-screen-xl">
+      <h6
+            class="my-0 text-base font-light text-[#00ADB3] uppercase"
+      >
+        get in touch
+      </h6>
+      <h2
+            class="mt-0 mb-4 text-3xl font-semibold xl:text-4xl"
+      >
+        Media Contact
+      </h2>
+      <div class="">
+        <span class="block font-semibold text-lg">Tim Brown</span>
+        <a
+              class="block font-light text-[#00ADB3] cursor-pointer"
+              href="mailto:press@eventpipe.com"
+              style="text-decoration: underline;"
+        >press@eventpipe.com</a
+        >
+        <span class="block font-light text-lg">844-MY-PIPE2</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 px-0 leading-7 bg-[#00ADB3]">
+    <div class="px-3 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <div class="flex flex-col justify-between items-center md:flex-row">
+        <div>
+          <h3
+                class="mt-0 mb-4 text-xl font-semibold text-white xl:text-2xl md:mb-0"
+          >
+            Ready to dive in? Let’s get in touch.
+          </h3>
+        </div>
+        <div>
+          <a
+                class="inline-block py-2 px-5 mr-4 font-medium leading-7 text-[#00ADB3] uppercase bg-white rounded cursor-pointer no-underline"
+                href="/contact"
+          >Contact Us</a>
+
+          <a
+                class="inline-block py-2 px-5 font-medium text-white uppercase bg-[#FCB817] rounded cursor-pointer"
+                href="/demo"
+                style="text-decoration: none;"
+          >get a demo</a
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="py-6 leading-7 bg-[#093E60] text-zinc-800">
+    <div class="px-3 mx-auto w-full text-zinc-800 max-w-screen-xl">
+      <div
+            class="flex flex-row flex-wrap justify-between items-center md:flex-row-reverse"
+      >
+        <div class="flex flex-row">
+          <a
+                class="mx-2 text-3xl font-bold text-white cursor-pointer"
+                href="https://twitter.com/GetEventPipe"
+                style="text-decoration: underline; line-height: 54px;"
+                target="_blank"
+          ><i
+                aria-hidden="true"
+                class="inline-block text-4xl not-italic font-normal leading-none fab fa-twitter-square"
+                style='font-variant: normal; text-rendering: auto; font-family: "Font Awesome 5 Brands";'
+          ></i
+          ></a>
+          <a
+                class="text-3xl font-bold text-white cursor-pointer"
+                href="https://www.linkedin.com/company/eventpipe"
+                style="text-decoration: underline; line-height: 54px;"
+                target="_blank"
+          ><i
+                aria-hidden="true"
+                class="inline-block text-4xl not-italic font-normal leading-none fab fa-linkedin"
+                style='font-variant: normal; text-rendering: auto; font-family: "Font Awesome 5 Brands";'
+          ></i
+          ></a>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="">
+            <img
+                  alt=""
+                  class="align-middle"
+                  src="/images/icon-white.png"
+                  width="40px"
+            />
+          </div>
+          <div class="">
+            <small class="block ml-4 text-sm font-light leading-5 text-white"
+            >For details on how we use your information please see our
+              <a
+                    class="text-sm cursor-pointer underline"
+                    href="/legal/privacy/"
+              >Privacy Policy</a
+              >.</small
+            >
+            <small class="block ml-4 text-sm font-light leading-5 text-white"
+            >© 2023 EventPipe™, Inc. All rights reserved.</small
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>
+</body>
+</html>
